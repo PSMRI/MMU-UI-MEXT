@@ -66,3 +66,7 @@ height: 50px !important;
   border-bottom-width: inherit !important;
   
 }
+h4 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
