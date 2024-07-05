@@ -10,9 +10,9 @@ md-input-container {
   width: 60%;
 }
 
-mat-card {
+/* mat-card {
   min-height: 400px;
-}
+} */
 
 ::ng-deep.pagination {
   margin: 0;
@@ -189,4 +189,7 @@ ul li div {
 .totalCount,
 .description {
   padding-top: 15px;
+}
+.table>thead {
+  border-bottom: 2px solid #ddd !important;
 }

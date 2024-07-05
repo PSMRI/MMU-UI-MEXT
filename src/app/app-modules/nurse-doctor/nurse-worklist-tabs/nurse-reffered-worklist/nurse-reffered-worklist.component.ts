@@ -90,8 +90,14 @@ export class NurseRefferedWorklistComponent implements OnInit, DoCheck {
   blankTable = [1, 2, 3, 4, 5];
 
   filterBeneficiaryList(searchTerm: string) {
-    if (!searchTerm) this.filteredBeneficiaryList = this.beneficiaryList;
-    else {
+    if (!searchTerm) {
+      this.filteredBeneficiaryList = this.beneficiaryList;
+      this.dataSource.data = this.filteredBeneficiaryList;
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.data.forEach((sectionCount: any, index: number) => {
+        sectionCount.sno = index + 1;
+      });
+    } else {
       this.filteredBeneficiaryList = [];
       this.beneficiaryList.forEach((item: any) => {
         console.log('item', JSON.stringify(item, null, 4));
@@ -134,7 +140,7 @@ export class NurseRefferedWorklistComponent implements OnInit, DoCheck {
                   break;
                 }
               } else {
-                const val = 'Revist';
+                const val = 'Revisit';
                 if (val.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0) {
                   this.filteredBeneficiaryList.push(item);
                   this.dataSource.data.push(item);

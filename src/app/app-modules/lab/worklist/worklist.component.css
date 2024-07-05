@@ -31,3 +31,6 @@ md-card {
     width: 100%;
   }
 }
+.table>thead {
+  border-bottom: 2px solid #ddd !important;
+}

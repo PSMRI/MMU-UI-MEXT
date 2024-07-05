@@ -1,7 +1,10 @@
 <div class="title" color="primary">
-  <h4>{{ currentLanguageSet?.benPreviousVisitDetails }}</h4>
+  <h4 style="font-size: 20px !important">
+    {{ currentLanguageSet?.benPreviousVisitDetails }}
+  </h4>
   <button
     class="mat_icon_white pull-right exit"
+    style="background-color: unset"
     [matDialogClose]="false"
     mat-icon-button>
     <mat-icon class="md-24">close</mat-icon>
@@ -12,7 +15,12 @@
   <table
     class="table table-bordered table-responsive"
     aria-describedby="visitDetailsForm"
-    style="width: 97.3%; font-size: 15px">
+    style="
+      width: 97.3%;
+      font-size: 15px;
+      margin-bottom: 30px;
+      margin-top: 40px;
+    ">
     <thead>
       <tr>
         <th style="width: 5%" id="visitno">
