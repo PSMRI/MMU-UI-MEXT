@@ -31,14 +31,14 @@ h5 {
 .input-full-width>>>.mdc-text-field--no-label:not(.mdc-text-field--outlined):not(.mdc-text-field--textarea) .mat-mdc-form-field-infix {
     padding-top: 16px;
     padding-bottom: 16px;
-    background-color: #f0f5f5 !important;
+    /* background-color: #f0f5f5 !important; */
     margin-left: unset;
 }
 
 .input_style>>>.mdc-text-field--no-label:not(.mdc-text-field--outlined):not(.mdc-text-field--textarea) .mat-mdc-form-field-infix {
     padding-top: 16px;
     padding-bottom: 16px;
-    background-color: #f0f5f5 !important;
+    /* background-color: #f0f5f5 !important; */
     margin-left: unset;
 }
 
@@ -76,7 +76,7 @@ h5 {
     border-bottom-style: unset !important;
 }
 
-.input-full-width>>>.mat-mdc-text-field-wrapper:not(.mdc-text-field--outlined) .mat-mdc-form-field-infix {
+/* .input-full-width>>>.mat-mdc-text-field-wrapper:not(.mdc-text-field--outlined) .mat-mdc-form-field-infix {
 
     background-color: #f0f5f5 !important;
-}
+} */

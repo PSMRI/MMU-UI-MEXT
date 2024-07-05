@@ -21,7 +21,7 @@
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
         <div class="select-container">
-          <mat-form-field>
+          <mat-form-field [style.width]="'100%'">
             <mat-label>{{ currentLanguageSet?.ro?.locInfo?.state }}</mat-label>
             <mat-select
               formControlName="stateID"
@@ -43,7 +43,7 @@
         <div
           *ngFor="let village of getDemographicsVillageList(); let i = index">
           <div [formGroupName]="i">
-            <mat-form-field>
+            <mat-form-field [style.width]="'100%'">
               <mat-label>{{
                 currentLanguageSet?.ro?.locInfo?.street
               }}</mat-label>
@@ -76,7 +76,7 @@
 
       <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
         <div class="select-container">
-          <mat-form-field>
+          <mat-form-field [style.width]="'100%'">
             <mat-label>{{
               currentLanguageSet?.ro?.locInfo?.districtTownCity
             }}</mat-label>
@@ -95,7 +95,7 @@
       </div>
       <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
         <div class="select-container">
-          <mat-form-field>
+          <mat-form-field [style.width]="'100%'">
             <mat-label>{{ currentLanguageSet?.ro?.locInfo?.taluk }}</mat-label>
             <mat-select
               [required]="true"
@@ -113,7 +113,7 @@
       <div class="clearfix"></div>
       <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
         <div class="select-container">
-          <mat-form-field>
+          <mat-form-field [style.width]="'100%'">
             <mat-label>{{ currentLanguageSet?.ro?.locInfo?.zone }}</mat-label>
             <mat-select [disabled]="true" formControlName="zoneID">
               <mat-option
@@ -128,7 +128,7 @@
 
       <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
         <div class="select-container">
-          <mat-form-field>
+          <mat-form-field [style.width]="'100%'">
             <mat-label>{{
               currentLanguageSet?.ro?.locInfo?.parkingPlace
             }}</mat-label>
@@ -144,7 +144,7 @@
       </div>
       <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
         <div class="select-container">
-          <mat-form-field>
+          <mat-form-field [style.width]="'100%'">
             <mat-label>{{
               currentLanguageSet?.casesheet?.servicePoint
             }}</mat-label>
@@ -160,7 +160,7 @@
       </div>
 
       <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-        <mat-form-field>
+        <mat-form-field [style.width]="'100%'">
           <mat-label>{{
             currentLanguageSet?.ro?.locInfo?.habitation
           }}</mat-label>
@@ -172,8 +172,8 @@
             maxlength="50" />
         </mat-form-field>
       </div>
-      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 m-t-20">
-        <mat-form-field>
+      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+        <mat-form-field [style.width]="'100%'">
           <mat-label>{{ currentLanguageSet?.ro?.locInfo?.address1 }}</mat-label>
           <input
             autocomplete="off"
@@ -183,8 +183,8 @@
             maxlength="50" />
         </mat-form-field>
       </div>
-      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 m-t-20">
-        <mat-form-field>
+      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+        <mat-form-field [style.width]="'100%'">
           <mat-label>{{ currentLanguageSet?.ro?.locInfo?.address2 }}</mat-label>
           <input
             autocomplete="off"
@@ -194,8 +194,8 @@
             maxlength="50" />
         </mat-form-field>
       </div>
-      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 m-t-20">
-        <mat-form-field>
+      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+        <mat-form-field [style.width]="'100%'">
           <mat-label>{{ currentLanguageSet?.ro?.locInfo?.address3 }}</mat-label>
           <input
             autocomplete="off"
@@ -205,8 +205,8 @@
             maxlength="50" />
         </mat-form-field>
       </div>
-      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 m-t-20">
-        <mat-form-field>
+      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+        <mat-form-field [style.width]="'100%'">
           <mat-label>{{ currentLanguageSet?.ro?.locInfo?.pincode }}</mat-label>
           <input
             autocomplete="off"
