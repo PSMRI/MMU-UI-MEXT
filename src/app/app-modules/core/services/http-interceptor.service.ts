@@ -39,6 +39,7 @@ export class HttpInterceptorService implements HttpInterceptor {
       modifiedReq = req.clone({
         headers: req.headers
           .set('Authorization', key)
+          .set('ServerAuthorization', key)
           .set('Content-Type', 'application/json'),
       });
     } else {
