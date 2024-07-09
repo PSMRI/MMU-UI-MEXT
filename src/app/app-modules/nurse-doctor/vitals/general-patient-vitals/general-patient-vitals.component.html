@@ -216,7 +216,10 @@
         </ng-template>
         <!-- <div class="clearfix"></div> -->
 
-        <div *ngIf="hideForANCAndQC">
+        <div
+          *ngIf="hideForANCAndQC"
+          class="row"
+          style="margin-left: 0px; padding: unset !important">
           <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
             <mat-form-field [style.width]="'100%'">
               <mat-label>{{
@@ -288,7 +291,7 @@
             </mat-form-field>
           </div>
 
-          <div *ngIf="visitCategory !== 'NCD screening'">
+          <div *ngIf="visitCategory !== 'NCD screening'" class="row">
             <div
               class="marker"
               *ngIf="

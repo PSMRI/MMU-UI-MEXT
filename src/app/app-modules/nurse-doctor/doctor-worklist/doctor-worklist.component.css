@@ -10,9 +10,9 @@ md-input-container {
   width: 60%;
 }
 
-mat-card {
+/* mat-card {
   min-height: 400px;
-}
+} */
 
 ::ng-deep.pagination {
   margin: 0;

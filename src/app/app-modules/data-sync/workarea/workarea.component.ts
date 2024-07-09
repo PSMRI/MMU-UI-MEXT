@@ -48,6 +48,7 @@ export class WorkareaComponent
   current_language_set: any;
   blankTable: any[] = [];
   showTable: boolean = false;
+  displaySyncBool: boolean = true;
 
   constructor(
     private router: Router,
@@ -173,6 +174,50 @@ export class WorkareaComponent
   //     }
   //   });
   // }
+  // syncGroups() {
+  //   this.dataSyncService.syncAllGroups().subscribe(
+  //     (res: any) => {
+  //       console.log(res);
+  //       if (res.statusCode === 200) {
+  //         if (res.data.groupsProgress) {
+  //           this.updateGroupStatus(res.data.groupsProgress);
+  //         }
+  //         this.confirmationService.alert(res.data.response, 'success');
+  //       } else {
+  //         this.confirmationService.alert(res.data.response, 'error');
+  //         if (res.data.groupsProgress) {
+  //           this.updateGroupStatus(res.data.groupsProgress);
+  //         }
+  //       }
+  //       this.showTable = true;
+  //     },
+  //     err => {
+  //       this.confirmationService.alert(
+  //         err.message || 'An error occurred',
+  //         'error'
+  //       );
+  //     }
+  //   );
+  // }
+
+  // updateGroupStatus(groupsProgress: any[]) {
+  //   this.syncTableGroupList.forEach((group: any) => {
+  //     const progress = groupsProgress.find(
+  //       (item: any) => item.groupId === group.syncTableGroupID
+  //     );
+  //     if (progress) {
+  //       if (progress.status === 'completed') {
+  //         group.status = 'success';
+  //       } else if (progress.status === 'failed') {
+  //         group.status = 'failed';
+  //       } else {
+  //         group.status = 'pending';
+  //       }
+  //     } else {
+  //       group.status = 'pending';
+  //     }
+  //   });
+  // }
   syncGroups() {
     this.dataSyncService.syncAllGroups().subscribe(
       (res: any) => {
@@ -181,6 +226,10 @@ export class WorkareaComponent
           if (res.data.groupsProgress) {
             this.updateGroupStatus(res.data.groupsProgress);
           }
+          // Update group status for all groups as 'success'
+          this.syncTableGroupList.forEach((group: any) => {
+            group.status = 'success';
+          });
           this.confirmationService.alert(res.data.response, 'success');
         } else {
           this.confirmationService.alert(res.data.response, 'error');
@@ -189,6 +238,7 @@ export class WorkareaComponent
           }
         }
         this.showTable = true;
+        this.displaySyncBool = false;
       },
       err => {
         this.confirmationService.alert(
@@ -198,7 +248,6 @@ export class WorkareaComponent
       }
     );
   }
-
   updateGroupStatus(groupsProgress: any[]) {
     this.syncTableGroupList.forEach((group: any) => {
       const progress = groupsProgress.find(
