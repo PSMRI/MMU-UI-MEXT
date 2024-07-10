@@ -28,7 +28,7 @@ import {
   NurseService,
 } from '../../../shared/services';
 import { HttpServiceService } from 'src/app/app-modules/core/services/http-service.service';
-import moment from 'moment';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-doctor-diagnosis-case-sheet',

@@ -1,10 +1,8 @@
 <section class="row" style="margin-top: 0.5%">
   <section class="col-md-8">
-    <div class="container-fluid searchBox">
+    <div class="container-fluid">
       <div class="row alignBox">
-        <div
-          class="col-11 col-lg-11 col-sm-11 col-md-11 col-xs-11"
-          style="padding: 0; border-right: 1px solid lightgray">
+        <div class="col-5 col-lg-5 col-sm-5 col-md-5 col-xs-5">
           <input
             autocomplete="off"
             id="searchbox"
@@ -16,18 +14,15 @@
             class="pull-left search_textbox"
             [(ngModel)]="quicksearchTerm"
             (keyup.enter)="identityQuickSearch(quicksearchTerm)" />
-        </div>
-        <div
-          class="col-1 col-lg-1 col-sm-1 col-md-1 col-xs-1"
-          style="padding-left: 0">
           <button
-            style="margin-left: 38rem; margin-top: 7px"
             class="search_button pull-right"
-            (click)="identityQuickSearch(quicksearchTerm)"
-            matTooltip="{{ currentLanguageSet?.quickSearch }}">
+            (click)="identityQuickSearch(quicksearchTerm)">
             <mat-icon class="material-icons search_icon">search</mat-icon>
           </button>
         </div>
+        <div
+          class="col-1 col-lg-1 col-sm-1 col-md-1 col-xs-1"
+          style="padding: 0 !important"></div>
       </div>
     </div>
   </section>

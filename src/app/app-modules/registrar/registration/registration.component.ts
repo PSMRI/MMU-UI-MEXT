@@ -962,6 +962,7 @@ export class RegistrationComponent
   }
 
   iEMRForm() {
+    console.log('register form', this.beneficiaryRegistrationForm);
     const personalForm = Object.assign(
       {},
       this.beneficiaryRegistrationForm.value.personalDetailsForm

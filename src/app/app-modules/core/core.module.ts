@@ -68,7 +68,7 @@ import { MyEmailDirective } from './directives/email/myEmail.directive';
 import { MyMobileNumberDirective } from './directives/MobileNumber/myMobileNumber.directive';
 import { MyNameDirective } from './directives/name/myName.directive';
 import { MyPasswordDirective } from './directives/password/myPassword.directive';
-import { SharedModule } from './shared/shared/shared.module';
+import { SharedModule } from './components/shared/shared.module';
 
 @NgModule({
   imports: [

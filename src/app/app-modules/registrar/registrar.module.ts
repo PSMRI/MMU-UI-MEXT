@@ -47,7 +47,8 @@ import { RegistrarService } from './shared/services/registrar.service';
 import { SearchComponent } from './search/search.component';
 import { SearchDialogComponent } from './search-dialog/search-dialog.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { SharedModule } from '../core/shared/shared/shared.module';
+import { SharedModule } from '../core/components/shared/shared.module';
+// import { SharedModule } from '../core/shared/shared/shared.module';
 
 @NgModule({
   imports: [

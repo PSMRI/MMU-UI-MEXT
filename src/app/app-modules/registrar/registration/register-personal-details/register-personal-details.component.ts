@@ -40,7 +40,6 @@ import {
   BsDatepickerConfig,
   BsDatepickerDirective,
 } from 'ngx-bootstrap/datepicker';
-import moment from 'moment';
 import { setTheme } from 'ngx-bootstrap/utils';
 import { RegistrarService } from '../../shared/services/registrar.service';
 import {
@@ -52,6 +51,7 @@ import {
   MomentDateAdapter,
   MAT_MOMENT_DATE_ADAPTER_OPTIONS,
 } from '@angular/material-moment-adapter';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-register-personal-details',

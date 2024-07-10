@@ -642,6 +642,9 @@ input {
     font-weight: 600 !important;
     letter-spacing: initial !important;
     font-family: 'SF-UI-Display-Regular';
+  color: rgba(0, 0, 0, 0.54) !important;
+  font-weight: 600 !important;
+  letter-spacing: initial !important;
 }
 .mdc-form-field>label {
   color: #000;
@@ -791,3 +794,10 @@ input.mat-input-element {
   font-weight: 600 !important;
 }
 
+.mat-mdc-form-field-error {
+  margin-top: -20px !important;
+}
+.background_color{
+  background: #0277bd !important;
+
+}

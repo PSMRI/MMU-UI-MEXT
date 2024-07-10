@@ -28,11 +28,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WebcamModule } from 'ngx-webcam';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
-import { RegistrarModule } from './app-modules/registrar/registrar.module';
 import { AudioRecordingService } from './app-modules/nurse-doctor/shared/services/audio-recording.service';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { SharedModule } from './app-modules/core/shared/shared/shared.module';
+// import { SharedModule } from './app-modules/core/shared/shared/shared.module';
 import { RegistrarService } from './app-modules/registrar/shared/services/registrar.service';
+import { DataSYNCModule } from './app-modules/data-sync/dataSync.module';
+import { SharedModule } from './app-modules/core/components/shared/shared.module';
 import { CommonModule } from '@angular/common';
 
 @NgModule({

@@ -67,6 +67,7 @@ export class ServicePointComponent implements OnInit, DoCheck {
   subDistrictList: any = [];
   demographicsMaster: any;
   villageList: any = [];
+  userLocationDetails: any;
 
   constructor(
     private router: Router,
@@ -296,6 +297,7 @@ export class ServicePointComponent implements OnInit, DoCheck {
           'servicePointName',
           this.servicePointForm.controls.servicePointName.value
         );
+      console.log('data before call', this.servicePointForm);
 
       this.servicePointService.getMMUDemographics().subscribe((res: any) => {
         if (res && res.statusCode === 200) {
@@ -324,18 +326,57 @@ export class ServicePointComponent implements OnInit, DoCheck {
         this.servicePointForm.controls.stateID.patchValue(
           data.otherLoc.stateID
         );
-        this.fetchDistrictsOnStateSelection(
-          this.servicePointForm.controls.stateID.value
+        this.servicePointForm.controls.stateName.patchValue(
+          data.otherLoc.stateName
         );
-        this.servicePointForm.controls.districtID.reset();
-        this.servicePointForm.controls.blockID.reset();
-        this.servicePointForm.controls.districtBranchID.reset();
+        this.fetchDistricts(this.servicePointForm.controls.stateID.value);
+        if (data.otherLoc.districtList) {
+          this.servicePointForm.patchValue({
+            districtID: data.otherLoc.districtList[0].districtID,
+            districtName: data.otherLoc.districtList[0].districtName,
+          });
+          this.fetchSubDistrictsOnDistrictSelection(
+            data.otherLoc.districtList[0].districtID
+          );
+          console.log('subDistrictList', this.subDistrictList);
+          console.log('data before patch', this.servicePointForm);
+          if (data.otherLoc.districtList[0].blockID) {
+            this.servicePointForm.patchValue({
+              blockID: data.otherLoc.districtList[0].blockID,
+              blockName: data.otherLoc.districtList[0].blockName,
+            });
+            console.log('data after patch', this.servicePointForm);
+            this.onSubDistrictChange(data.otherLoc.districtList[0].blockID);
+          } else {
+            this.confirmationService.alert(
+              'Please add block in worklocation mapping to proceed further',
+              'info'
+            );
+          }
+        }
+
+        // }
+        // this.servicePointForm.controls.districtID.reset();
+        // this.servicePointForm.controls.blockID.reset();
+        // this.servicePointForm.controls.districtBranchID.reset();
       } else {
         this.locationGathetingIssues();
       }
     } else {
       this.locationGathetingIssues();
     }
+  }
+  fetchDistricts(stateID: any) {
+    this.registrarService.getDistrictList(stateID).subscribe((res: any) => {
+      if (res && res.statusCode === 200) {
+        this.districtList = res.data;
+      } else {
+        this.confirmationService.alert(
+          this.currentLanguageSet.alerts.info.IssuesInFetchingDemographics,
+          'error'
+        );
+      }
+    });
   }
 
   fetchDistrictsOnStateSelection(stateID: any) {
