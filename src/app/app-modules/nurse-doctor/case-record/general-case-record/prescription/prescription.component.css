@@ -57,3 +57,9 @@ legend {
   }
 
 }
+mat-form-field >>>.mat-label-text {
+  color: #999 !important;
+    font-weight: 600 !important;
+    letter-spacing: initial !important;
+    font-family: 'SF-UI-Display-Regular' !important;
+}

@@ -37,7 +37,7 @@
         [ngClass]="{ odd: !isOdd }">
         <ng-container [formGroupName]="i">
           <div class="col-md-3 box">
-            <mat-form-field>
+            <mat-form-field [style.width]="'100%'">
               <mat-label class="mat-label-text">{{
                 currentLanguageSet?.historyData?.ancHistory
                   ?.pastIllnessDataANC_OPD_NCD_PNC?.illness
@@ -61,7 +61,7 @@
           <div
             class="col-3 box"
             *ngIf="pastIllness.value.illnessType?.illnessType === 'Other'">
-            <mat-form-field class="input-full-width">
+            <mat-form-field [style.width]="'100%'" class="input-full-width">
               <mat-label class="mat-label-text">{{
                 currentLanguageSet?.historyData?.opdNCDPNCHistory?.obstetric
                   ?.others
@@ -78,7 +78,7 @@
           </div>
 
           <div class="col-2 box">
-            <mat-form-field class="input-full-width">
+            <mat-form-field [style.width]="'100%'" class="input-full-width">
               <mat-label class="mat-label-text">{{
                 currentLanguageSet?.nurseData?.chiefComplaintsDetails?.duration
               }}</mat-label>
@@ -96,7 +96,7 @@
           </div>
 
           <div class="col-3 box">
-            <mat-form-field style="width: 100%">
+            <mat-form-field [style.width]="'100%'" style="width: 100%">
               <mat-label class="mat-label-text">{{
                 currentLanguageSet?.DurationData?.timeperiodAgo
               }}</mat-label>
@@ -113,7 +113,7 @@
             </mat-form-field>
           </div>
 
-          <div class="col-2 box">
+          <div class="col-2 box" style="margin-top: 10px">
             <button
               style="margin-right: 5px"
               mat-mini-fab
@@ -164,7 +164,7 @@
       [ngClass]="{ odd: !isOdd }">
       <ng-container [formGroupName]="i">
         <div class="col-3 box">
-          <mat-form-field>
+          <mat-form-field [style.width]="'100%'">
             <mat-label class="mat-label-text">{{
               currentLanguageSet?.historyData?.ancHistory
                 ?.pastHOSurgeryANC_OPD_NCD_PNC?.hoSurgery
@@ -188,7 +188,7 @@
         <div
           class="col-2 box"
           *ngIf="pastSurgery.value.surgeryType?.surgeryType === 'Other'">
-          <mat-form-field class="input-full-width">
+          <mat-form-field [style.width]="'100%'" class="input-full-width">
             <mat-label class="mat-label-text">{{
               currentLanguageSet?.historyData?.opdNCDPNCHistory?.obstetric
                 ?.others
@@ -205,7 +205,7 @@
         </div>
 
         <div class="col-2 box">
-          <mat-form-field class="input-full-width">
+          <mat-form-field [style.width]="'100%'" class="input-full-width">
             <mat-label class="mat-label-text">{{
               currentLanguageSet?.nurseData?.chiefComplaintsDetails?.duration
             }}</mat-label>
@@ -222,7 +222,7 @@
         </div>
 
         <div class="col-3 box">
-          <mat-form-field>
+          <mat-form-field [style.width]="'100%'">
             <mat-label class="mat-label-text">{{
               currentLanguageSet?.DurationData?.timeperiodAgo
             }}</mat-label>
@@ -239,7 +239,7 @@
           </mat-form-field>
         </div>
 
-        <div class="col-2 box">
+        <div class="col-2 box" style="margin-top: 10px">
           <button
             md-mini-fab
             color="warn"

@@ -653,6 +653,10 @@ input {
 }
 .mat-mdc-form-field:not(.mat-form-field-disabled) .mat-mdc-floating-label.mdc-floating-label {
   font-size: 15px !important;
+  color: #999 !important;
+    font-weight: 600 !important;
+    letter-spacing: initial !important;
+    font-family: 'SF-UI-Display-Regular';
 }
 .mat-select-disabled .mat-select-underline {
   background-color: transparent;
@@ -776,3 +780,14 @@ input.mat-input-element {
 .mat-mdc-text-field-wrapper .mat-mdc-form-field-infix .mat-mdc-floating-label {
   margin-top: -5px !important;
 }
+
+.mdc-text-field--outlined .mdc-notched-outline {
+  height: 40px !important;
+}
+.mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+  color: white !important;
+}
+.mat-mdc-tab-group.mat-mdc-tab-group-stretch-tabs>.mat-mdc-tab-header .mat-mdc-tab {
+  font-weight: 600 !important;
+}
+
