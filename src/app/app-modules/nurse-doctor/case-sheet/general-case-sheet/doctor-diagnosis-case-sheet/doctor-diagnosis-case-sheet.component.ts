@@ -99,6 +99,7 @@ export class DoctorDiagnosisCaseSheetComponent
   referralReasonList = '';
   MMUReferDetails: any;
   mmuServiceList: string = '';
+  isCovidVaccinationStatusVisible = false;
 
   constructor(
     private doctorService: DoctorService,
