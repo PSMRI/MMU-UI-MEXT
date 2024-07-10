@@ -43,11 +43,45 @@ import {
 import moment from 'moment';
 import { setTheme } from 'ngx-bootstrap/utils';
 import { RegistrarService } from '../../shared/services/registrar.service';
+import {
+  DateAdapter,
+  MAT_DATE_FORMATS,
+  MAT_DATE_LOCALE,
+} from '@angular/material/core';
+import {
+  MomentDateAdapter,
+  MAT_MOMENT_DATE_ADAPTER_OPTIONS,
+} from '@angular/material-moment-adapter';
 
 @Component({
   selector: 'app-register-personal-details',
   templateUrl: './register-personal-details.component.html',
   styleUrls: ['./register-personal-details.component.css'],
+  providers: [
+    {
+      provide: MAT_DATE_LOCALE,
+      useValue: 'en-US', // Set the desired locale (e.g., 'en-GB' for dd/MM/yyyy)
+    },
+    {
+      provide: DateAdapter,
+      useClass: MomentDateAdapter,
+      deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS],
+    },
+    {
+      provide: MAT_DATE_FORMATS,
+      useValue: {
+        parse: {
+          dateInput: 'LL',
+        },
+        display: {
+          dateInput: 'DD/MM/YYYY', // Set the desired display format
+          monthYearLabel: 'MMM YYYY',
+          dateA11yLabel: 'LL',
+          monthYearA11yLabel: 'MMMM YYYY',
+        },
+      },
+    },
+  ],
 })
 export class RegisterPersonalDetailsComponent
   implements OnInit, DoCheck, OnDestroy
@@ -87,7 +121,8 @@ export class RegisterPersonalDetailsComponent
     private cameraService: CameraService,
     private registrarService: RegistrarService,
     private beneficiaryDetailsService: BeneficiaryDetailsService,
-    private languageComponent: SetLanguageComponent
+    private languageComponent: SetLanguageComponent,
+    private cdr: ChangeDetectorRef
     // dateAdapter: DateAdapter<NativeDateAdapter>
   ) {
     // dateAdapter.setLocale('en-IN');
@@ -567,12 +602,12 @@ export class RegisterPersonalDetailsComponent
       } else {
         console.log(
           moment()
-            .subtract(this.personalDetailsForm.value.ageUnit, valueEntered)
+            .subtract(valueEntered, this.personalDetailsForm.value.ageUnit)
             .toDate()
         );
         this.personalDetailsForm.patchValue({
           dob: moment()
-            .subtract(this.personalDetailsForm.value.ageUnit, valueEntered)
+            .subtract(valueEntered, this.personalDetailsForm.value.ageUnit)
             .toDate(),
         });
       }
@@ -593,9 +628,7 @@ export class RegisterPersonalDetailsComponent
    */
   dobChangeByCalender(dobval: any) {
     const date = new Date(this.dateForCalendar);
-    console.log(' personalDetailsForm', this.personalDetailsForm.value);
-    // console.log(this.dateForCalendar,'fromcalendar');
-    // console.log(date,'new')
+    console.log('personalDetailsForm', this.personalDetailsForm.value);
     if (
       this.dateForCalendar &&
       (dobval || dobval.length === 10) &&
@@ -620,7 +653,13 @@ export class RegisterPersonalDetailsComponent
         this.personalDetailsForm.patchValue({ age: 1 });
         this.personalDetailsForm.patchValue({ ageUnit: 'Days' });
       }
-
+      // // Manually format the date as dd-MM-yyyy
+      // const formattedDate = this.formatDate(date);
+      // // Use setTimeout to avoid ExpressionChangedAfterItHasBeenCheckedError
+      // setTimeout(() => {
+      //   this.personalDetailsForm.patchValue({ dob: formattedDate });
+      //   this.cdr.detectChanges(); // Optional: Ensure changes are detected
+      // });
       this.checkAgeAtMarriage();
       this.confirmMarriageEligible();
     } else if (dobval === 'Invalid date') {
@@ -634,6 +673,13 @@ export class RegisterPersonalDetailsComponent
       this.personalDetailsForm.patchValue({ age: null });
     }
   }
+
+  // formatDate(date: Date): string {
+  //   const day = ('0' + date.getDate()).slice(-2);
+  //   const month = ('0' + (date.getMonth() + 1)).slice(-2);
+  //   const year = date.getFullYear();
+  //   return `${day}-${month}-${year}`;
+  // }
   /**
    * Check Marriage Eligibility to enable Field
    *
