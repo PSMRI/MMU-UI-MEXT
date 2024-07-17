@@ -484,7 +484,7 @@ export class GeneralPersonalHistoryComponent
     const previousValue: any = this.previousSelectedTobaccoList[i];
 
     if (tobaccoForm && tobacco.tobaccoUseType !== 'Other')
-      tobacco.patchValue({ otherTobaccoUseType: null });
+      tobaccoForm.patchValue({ otherTobaccoUseType: null });
 
     if (previousValue) {
       this.tobaccoSelectList.map((item: any, t: any) => {
@@ -672,7 +672,11 @@ export class GeneralPersonalHistoryComponent
     }
   }
 
-  filterAlleryList(event: any, i: any) {
+  filterAlleryList(
+    event: any,
+    i: any,
+    allergyForm?: AbstractControl<any, any>
+  ) {
     const allergy: any = event.value;
     const previousValue = this.previousSelectedAlleryList[i];
     if (previousValue) {
@@ -688,6 +692,17 @@ export class GeneralPersonalHistoryComponent
       if (index !== -1 && t !== i) item = item.splice(index, 1);
     });
     this.previousSelectedAlleryList[i] = allergy;
+    if (allergyForm?.value?.allergyType) {
+      allergyForm?.get('snomedTerm')?.enable();
+      allergyForm?.get('snomedTerm')?.reset();
+      allergyForm?.get('typeOfAllergicReactions')?.enable();
+      allergyForm?.get('typeOfAllergicReactions')?.reset();
+    } else {
+      allergyForm?.get('snomedTerm')?.disable();
+      allergyForm?.get('snomedTerm')?.reset();
+      allergyForm?.get('typeOfAllergicReactions')?.enable();
+      allergyForm?.get('typeOfAllergicReactions')?.reset();
+    }
   }
 
   removeAllergy(i: any, allergyForm?: AbstractControl<any, any>) {

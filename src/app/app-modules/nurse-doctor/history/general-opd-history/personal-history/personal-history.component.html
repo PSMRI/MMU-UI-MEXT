@@ -218,7 +218,7 @@
               <mat-select
                 class="select-full-width"
                 formControlName="tobaccoUseType"
-                (selectionChange)="filterTobaccoList($event, i)">
+                (selectionChange)="filterTobaccoList($event, i, tobacco)">
                 <mat-option
                   *ngFor="let tobacco of tobaccoSelectList[i]"
                   [value]="tobacco">
@@ -547,7 +547,7 @@
               <mat-select
                 class="select-full-width"
                 formControlName="allergyType"
-                (selectionChange)="filterAlleryList($event, i)">
+                (selectionChange)="filterAlleryList($event, i, allergy)">
                 <mat-option
                   *ngFor="let allergy of allerySelectList[i]"
                   [value]="allergy"

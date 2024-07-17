@@ -531,11 +531,10 @@ export class PastHistoryComponent implements OnInit, DoCheck, OnDestroy {
   }
 
   filterPastSurgeryType(
-    event: any,
+    surgery: any,
     i: any,
     pastSurgeryForm?: AbstractControl<any, any>
   ) {
-    const surgery: any = event.value;
     const previousValue = this.previousSelectedSurgeryTypeList[i];
 
     if (pastSurgeryForm && surgery.surgeryType !== 'Other')
