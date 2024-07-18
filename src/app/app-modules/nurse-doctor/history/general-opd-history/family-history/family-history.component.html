@@ -28,7 +28,7 @@
       [ngClass]="{ odd: !isOdd }">
       <ng-container [formGroupName]="i">
         <div class="col-3 box">
-          <mat-form-field [style.width]="'100%'">
+          <mat-form-field class="select-full-width">
             <mat-label class="mat-label-text">{{
               currentLanguageSet?.historyData?.ancHistory
                 ?.familyHistoryDataANC_OPD_NCD_PNC?.diseaseType
@@ -52,7 +52,7 @@
         <div
           class="col-3 box"
           *ngIf="familyDisease.value.diseaseType?.diseaseType === 'Other'">
-          <mat-form-field class="input-full-width">
+          <mat-form-field class="select-full-width">
             <mat-label class="mat-label-text">{{
               currentLanguageSet?.pncData?.others
             }}</mat-label>
@@ -68,7 +68,7 @@
         </div>
 
         <div class="col-3 box" [hidden]="true">
-          <mat-form-field class="input-full-width">
+          <mat-form-field class="select-full-width">
             <mat-label class="mat-label-text">{{
               currentLanguageSet?.historyData?.opdNCDPNCHistory?.otherVaccine
                 ?.sctCode
@@ -83,7 +83,7 @@
         </div>
 
         <div class="col-3 box">
-          <mat-form-field class="input-full-width">
+          <mat-form-field class="select-full-width">
             <mat-label class="mat-label-text">{{
               currentLanguageSet?.historyData?.ancHistory
                 ?.familyHistoryDataANC_OPD_NCD_PNC?.familyMember
@@ -140,6 +140,7 @@
         }}</label>
         <div class="clearfix"></div>
         <mat-radio-group
+          style="margin-left: -9px"
           name="isGeneticDisorder"
           formControlName="isGeneticDisorder"
           (change)="resetOtherGeneticOrder()">
@@ -176,6 +177,7 @@
         }}</label>
         <div class="clearfix"></div>
         <mat-radio-group
+          style="margin-left: -9px"
           name="isConsanguineousMarrige"
           formControlName="isConsanguineousMarrige">
           <mat-radio-button color="primary" [value]="true">{{

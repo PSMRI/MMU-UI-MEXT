@@ -6,6 +6,7 @@
     }}</label>
     <div class="clearfix"></div>
     <mat-radio-group
+      style="margin-left: -9px"
       name="jugularVenousPulse_JVP"
       formControlName="jugularVenousPulse_JVP">
       <mat-radio-button color="primary" value="Normal">{{
@@ -108,7 +109,10 @@
         ?.cardioForANC_OPD_PNC?.murmurs
     }}</label>
     <div class="clearfix"></div>
-    <mat-radio-group name="murmurs" formControlName="murmurs">
+    <mat-radio-group
+      style="margin-left: -9px"
+      name="murmurs"
+      formControlName="murmurs">
       <mat-radio-button color="primary" value="Present">{{
         currentLanguageSet?.common?.present
       }}</mat-radio-button>
@@ -124,7 +128,10 @@
         ?.cardioForANC_OPD_PNC?.pericardialrub
     }}</label>
     <div class="clearfix"></div>
-    <mat-radio-group name="pericardialRub" formControlName="pericardialRub">
+    <mat-radio-group
+      style="margin-left: -9px"
+      name="pericardialRub"
+      formControlName="pericardialRub">
       <mat-radio-button color="primary" value="Present">{{
         currentLanguageSet?.common?.present
       }}</mat-radio-button>

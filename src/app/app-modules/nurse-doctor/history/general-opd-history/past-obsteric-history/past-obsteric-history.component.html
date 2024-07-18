@@ -15,7 +15,7 @@
 </div>
 <div class="row" [formGroup]="pastObstericHistoryForm">
   <div class="col-xs-12 col-sm-4 box">
-    <mat-form-field class="input-full-width mat_form_field_width_thee">
+    <mat-form-field class="input-full-width">
       <mat-label class="mat-label-text">{{
         currentLanguageSet?.historyData?.opdNCDPNCHistory?.obstetric
           ?.totalNumberofPregnancies
@@ -69,7 +69,7 @@
       <ng-container [formGroupName]="i">
         <mat-card-content>
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 box">
-            <mat-form-field>
+            <mat-form-field class="input-full-width">
               <mat-label>{{
                 currentLanguageSet?.historyData?.opdNCDPNCHistory?.obstetric
                   ?.number
@@ -86,7 +86,7 @@
 
           <div class="row" style="display: flex">
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 box">
-              <mat-form-field style="width: 300px">
+              <mat-form-field class="input-full-width">
                 <mat-label class="mat-label-text">{{
                   currentLanguageSet?.historyData?.opdNCDPNCHistory?.obstetric
                     ?.complicationduringPregnancy
@@ -128,7 +128,7 @@
               *ngIf="
                 complicationOptionConstraints[i]?.showOtherPregnancyComplication
               ">
-              <mat-form-field>
+              <mat-form-field class="input-full-width">
                 <mat-label>{{
                   currentLanguageSet?.historyData?.opdNCDPNCHistory?.obstetric
                     ?.others
@@ -145,7 +145,7 @@
             </div>
 
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 box">
-              <mat-form-field style="width: 300px">
+              <mat-form-field class="input-full-width">
                 <mat-label class="mat-label-text">{{
                   currentLanguageSet?.historyData?.opdNCDPNCHistory?.obstetric
                     ?.outcomeofpregnancy
@@ -171,7 +171,7 @@
                 'Abortion'
               ">
               <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 box">
-                <mat-form-field>
+                <mat-form-field class="input-full-width">
                   <mat-label class="mat-label-text">{{
                     currentLanguageSet?.historyData?.opdNCDPNCHistory?.obstetric
                       ?.typeOfAbortion
@@ -203,7 +203,7 @@
                   pastObstericHistory.value.abortionType?.complicationValue ===
                   'Induced'
                 ">
-                <mat-form-field>
+                <mat-form-field class="input-full-width">
                   <mat-label class="mat-label-text">{{
                     currentLanguageSet?.historyData?.opdNCDPNCHistory?.obstetric
                       ?.typeofFacility
@@ -226,7 +226,7 @@
                 </mat-form-field>
               </div>
               <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 box">
-                <mat-form-field>
+                <mat-form-field class="input-full-width">
                   <mat-label class="mat-label-text">{{
                     currentLanguageSet?.historyData?.opdNCDPNCHistory?.obstetric
                       ?.noOfcompletedWeeks
@@ -245,7 +245,7 @@
                 </mat-form-field>
               </div>
               <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 box">
-                <mat-form-field>
+                <mat-form-field class="input-full-width">
                   <mat-label class="mat-label-text">{{
                     currentLanguageSet?.historyData?.opdNCDPNCHistory?.obstetric
                       ?.complicationPostAbortion
@@ -293,7 +293,7 @@
                 pastObstericHistory.value.pregOutcome?.pregOutcome !==
                 'Abortion'
               ">
-              <mat-form-field>
+              <mat-form-field class="input-full-width">
                 <mat-label class="mat-label-text">{{
                   currentLanguageSet?.historyData?.opdNCDPNCHistory?.obstetric
                     ?.durationofPregnancy
@@ -316,7 +316,7 @@
                 'Abortion'
               ">
               <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 box">
-                <mat-form-field>
+                <mat-form-field class="input-full-width">
                   <mat-label class="mat-label-text">{{
                     currentLanguageSet?.historyData?.opdNCDPNCHistory?.obstetric
                       ?.placeofDelivery
@@ -342,7 +342,7 @@
                   pastObstericHistory.value.deliveryPlace?.deliveryPlace ===
                   'Other'
                 ">
-                <mat-form-field>
+                <mat-form-field class="input-full-width">
                   <mat-label class="mat-label-text">{{
                     currentLanguageSet?.historyData?.opdNCDPNCHistory?.obstetric
                       ?.others
@@ -365,7 +365,7 @@
                 pastObstericHistory.value.pregOutcome?.pregOutcome !==
                 'Abortion'
               ">
-              <mat-form-field>
+              <mat-form-field class="input-full-width">
                 <mat-label class="mat-label-text">{{
                   currentLanguageSet?.historyData?.opdNCDPNCHistory?.obstetric
                     ?.deliveryType
@@ -395,7 +395,7 @@
                 'Abortion'
               ">
               <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 box">
-                <mat-form-field>
+                <mat-form-field class="input-full-width">
                   <mat-label class="mat-label-text">{{
                     currentLanguageSet?.historyData?.opdNCDPNCHistory?.obstetric
                       ?.deliveryComplication
@@ -441,7 +441,7 @@
                   complicationOptionConstraints[i]
                     ?.showOtherDeliveryComplication
                 ">
-                <mat-form-field>
+                <mat-form-field class="input-full-width">
                   <mat-label class="mat-label-text">{{
                     currentLanguageSet?.historyData?.opdNCDPNCHistory?.obstetric
                       ?.others
@@ -459,7 +459,7 @@
             </ng-container>
 
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 box">
-              <mat-form-field>
+              <mat-form-field class="input-full-width">
                 <mat-label class="mat-label-text">{{
                   currentLanguageSet?.historyData?.opdNCDPNCHistory?.obstetric
                     ?.postpartumComplication
@@ -505,7 +505,7 @@
                 complicationOptionConstraints[i]
                   ?.showOtherPostpartumComplication
               ">
-              <mat-form-field>
+              <mat-form-field class="input-full-width">
                 <mat-label class="mat-label-text">{{
                   currentLanguageSet?.historyData?.opdNCDPNCHistory?.obstetric
                     ?.others
@@ -527,7 +527,7 @@
                 pastObstericHistory.value.pregOutcome?.pregOutcome ===
                 'Live Birth'
               ">
-              <mat-form-field>
+              <mat-form-field class="input-full-width">
                 <mat-label class="mat-label-text">{{
                   currentLanguageSet?.historyData?.opdNCDPNCHistory?.obstetric
                     ?.newBornComplication
@@ -555,7 +555,7 @@
                 pastObstericHistory.value.newBornComplication
                   ?.complicationValue === 'Other'
               ">
-              <mat-form-field>
+              <mat-form-field class="input-full-width">
                 <mat-label class="mat-label-text">{{
                   currentLanguageSet?.historyData?.opdNCDPNCHistory?.obstetric
                     ?.others
@@ -577,7 +577,7 @@
                 pastObstericHistory.value.pregOutcome?.pregOutcome ===
                 'Live Birth'
               ">
-              <mat-form-field>
+              <mat-form-field class="input-full-width">
                 <mat-label class="mat-label-text">{{
                   currentLanguageSet?.historyData?.opdNCDPNCHistory?.obstetric
                     ?.congenitalAnomalies

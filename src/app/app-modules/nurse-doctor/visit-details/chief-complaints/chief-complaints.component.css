@@ -50,9 +50,9 @@ h5 {
     padding: unset !important;
 }
 
-.input-full-width>>>.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
+/* .input-full-width>>>.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
     border-bottom-style: dotted !important;
-}
+} */
 
 .btn-warn {
     background-color: red;
@@ -72,9 +72,9 @@ h5 {
     width: 40px;
     height: 40px;
 }
-.input-full-width >>> .mat-mdc-form-field:not(.mat-form-field-no-animations) .mdc-text-field__input {
+/* .input-full-width >>> .mat-mdc-form-field:not(.mat-form-field-no-animations) .mdc-text-field__input {
     border-bottom-style: unset !important;
-}
+} */
 
 /* .input-full-width>>>.mat-mdc-text-field-wrapper:not(.mdc-text-field--outlined) .mat-mdc-form-field-infix {
 

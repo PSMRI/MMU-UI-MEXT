@@ -64,12 +64,11 @@
         </div>
 
         <div class="col-3">
-          <mat-form-field>
+          <mat-form-field class="select-full-width">
             <mat-label class="mat-label-text">{{
               currentLanguageSet?.DurationData?.durationUnit
             }}</mat-label>
             <mat-select
-              class="select-full-width"
               formControlName="timePeriodUnit"
               name="timePeriodAgoUnit"
               (selectionChange)="validateDuration(medicationHistory)">

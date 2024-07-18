@@ -462,6 +462,7 @@ mat-mdc-form-field-label-always-float {
 
 h5 {
   font-size: larger;
+  margin-bottom: 0rem !important;
 }
 
 .mat-expansion-panel-body {
@@ -787,8 +788,11 @@ input.mat-input-element {
 .mdc-text-field--outlined .mdc-notched-outline {
   height: 40px !important;
 }
-.mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+/* .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
   color: white !important;
+} */
+.mat-expansion-panel-header.mat-expanded {
+  height: 45px !important;
 }
 .mat-mdc-tab-group.mat-mdc-tab-group-stretch-tabs>.mat-mdc-tab-header .mat-mdc-tab {
   font-weight: 600 !important;

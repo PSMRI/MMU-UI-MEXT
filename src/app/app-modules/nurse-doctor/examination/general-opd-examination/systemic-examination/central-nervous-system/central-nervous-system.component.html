@@ -1,6 +1,6 @@
 <div class="row m-t-20" [formGroup]="centralNervousSystemDataForm">
   <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 box">
-    <mat-form-field>
+    <mat-form-field class="textarea-full-width">
       <mat-label>{{
         currentLanguageSet?.ExaminationData?.ANC_OPD_PNCExamination?.systemic
           ?.centralANC_OPD_PNC?.handedness
@@ -110,6 +110,7 @@
     }}</label>
     <div class="clearfix"></div>
     <mat-radio-group
+      style="margin-left: -9px"
       name="signsOfMeningealIrritation"
       formControlName="signsOfMeningealIrritation">
       <mat-radio-button color="primary" value="Present">{{

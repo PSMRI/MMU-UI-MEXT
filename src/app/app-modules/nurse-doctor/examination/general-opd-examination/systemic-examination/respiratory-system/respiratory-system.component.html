@@ -1,7 +1,7 @@
 <div class="col-12 m-t-20" [formGroup]="respiratorySystemDataForm">
   <div class="row">
     <div class="col-3 box">
-      <mat-form-field>
+      <mat-form-field class="textarea-full-width">
         <mat-label>{{
           currentLanguageSet?.ExaminationData?.ANC_OPD_PNCExamination?.systemic
             ?.respiratoryANC_OPD_PNC?.trachea
@@ -43,6 +43,7 @@
       }}</label>
       <div class="clearfix"></div>
       <mat-radio-group
+        style="margin-left: -9px"
         name="signsOfRespiratoryDistress"
         formControlName="signsOfRespiratoryDistress">
         <mat-radio-button color="primary" value="Present">{{
@@ -72,7 +73,7 @@
     </div>
 
     <div class="col-3 box">
-      <mat-form-field>
+      <mat-form-field class="textarea-full-width">
         <mat-label>{{
           currentLanguageSet?.ExaminationData?.ANC_OPD_PNCExamination?.systemic
             ?.respiratoryANC_OPD_PNC?.breathsounds
@@ -97,6 +98,7 @@
       }}</label>
       <div class="clearfix"></div>
       <mat-radio-group
+        style="margin-left: -9px"
         name="auscultation_Stridor"
         formControlName="auscultation_Stridor">
         <mat-radio-button color="primary" value="Present">{{
@@ -115,6 +117,7 @@
       }}</label>
       <div class="clearfix"></div>
       <mat-radio-group
+        style="margin-left: -9px"
         name="auscultation_Crepitations"
         formControlName="auscultation_Crepitations">
         <mat-radio-button color="primary" value="Present">{{
@@ -133,6 +136,7 @@
       }}</label>
       <div class="clearfix"></div>
       <mat-radio-group
+        style="margin-left: -9px"
         name="auscultation_Wheezing"
         formControlName="auscultation_Wheezing">
         <mat-radio-button color="primary" value="Present">{{
@@ -151,6 +155,7 @@
       }}</label>
       <div class="clearfix"></div>
       <mat-radio-group
+        style="margin-left: -9px"
         name="auscultation_PleuralRub"
         formControlName="auscultation_PleuralRub">
         <mat-radio-button color="primary" value="Present">{{
@@ -169,6 +174,7 @@
       }}</label>
       <div class="clearfix"></div>
       <mat-radio-group
+        style="margin-left: -9px"
         name="auscultation_ConductedSounds"
         formControlName="auscultation_ConductedSounds">
         <mat-radio-button color="primary" value="Present">{{
@@ -181,7 +187,7 @@
     </div>
 
     <div class="col-3 box">
-      <mat-form-field>
+      <mat-form-field class="textarea-full-width">
         <mat-label>{{
           currentLanguageSet?.ExaminationData?.ANC_OPD_PNCExamination?.systemic
             ?.respiratoryANC_OPD_PNC?.percussion

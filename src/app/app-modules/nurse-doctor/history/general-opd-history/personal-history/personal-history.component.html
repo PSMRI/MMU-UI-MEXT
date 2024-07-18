@@ -208,8 +208,8 @@
         "
         [ngClass]="{ odd: !isOdd }">
         <ng-container [formGroupName]="i">
-          <div class="col-4 box">
-            <mat-form-field class="mat_form_field">
+          <div class="col-3 box">
+            <mat-form-field class="select-full-width">
               <mat-label class="mat-label-text">{{
                 currentLanguageSet?.historyData?.ancHistory
                   ?.personalHistoryANC_OPD_NCD_PNC?.tobaccoData
@@ -229,9 +229,9 @@
           </div>
 
           <div
-            class="col-4 box"
+            class="col-2 box"
             *ngIf="tobacco.value.tobaccoUseType?.habitValue === 'Other'">
-            <mat-form-field class="mat_form_field">
+            <mat-form-field class="select-full-width">
               <mat-label class="mat-label-text">{{
                 currentLanguageSet?.historyData?.opdNCDPNCHistory?.obstetric
                   ?.others
@@ -246,10 +246,8 @@
             </mat-form-field>
           </div>
 
-          <div class="col-4 box">
-            <mat-form-field
-              class="mat_form_field"
-              class="input-full-width mat_form_field mat_form_field_width">
+          <div class="col-2 box">
+            <mat-form-field class="input-full-width">
               <mat-label class="mat-label-text">{{
                 currentLanguageSet?.historyData?.ancHistory
                   ?.personalHistoryANC_OPD_NCD_PNC?.tobaccoData?.number
@@ -267,10 +265,7 @@
           </div>
 
           <div class="col-xs-12 col-sm-6 col-md-2 box">
-            <mat-radio-group
-              formControlName="perDay"
-              (change)="perDayChange()"
-              style="margin-left: -10px">
+            <mat-radio-group formControlName="perDay" (change)="perDayChange()">
               <mat-radio-button
                 color="primary"
                 class="radio-button"
@@ -286,8 +281,8 @@
             </mat-radio-group>
           </div>
 
-          <div class="col-4 box">
-            <mat-form-field class="mat_form_field">
+          <div class="col-2 box">
+            <mat-form-field class="select-full-width">
               <mat-label class="mat-label-text">{{
                 currentLanguageSet?.nurseData?.chiefComplaintsDetails?.duration
               }}</mat-label>
@@ -302,8 +297,8 @@
             </mat-form-field>
           </div>
 
-          <div class="col-4 box">
-            <mat-form-field class="mat_form_field">
+          <div class="col-3 box">
+            <mat-form-field class="select-full-width">
               <mat-label class="mat-label-text">{{
                 currentLanguageSet?.DurationData?.durationUnit
               }}</mat-label>
@@ -320,8 +315,8 @@
           </div>
 
           <div
-            class="col-4 box action-btn-container padding-0-left-right-al"
-            style="text-align: center; margin-top: 5px">
+            class="ccol-12 box action-btn-container -al"
+            style="text-align: end; margin-top: 5px">
             <button
               md-mini-fab
               color="warn"
@@ -372,8 +367,8 @@
         "
         [ngClass]="{ odd: !isOdd }">
         <ng-container [formGroupName]="i">
-          <div class="col-4 box padding-0-right">
-            <mat-form-field class="mat_form_field">
+          <div class="col-2 box">
+            <mat-form-field class="select-full-width">
               <mat-label class="mat-label-text">{{
                 currentLanguageSet?.historyData?.ancHistory
                   ?.personalHistoryANC_OPD_NCD_PNC?.alcoholData?.typeofAlcohol
@@ -394,7 +389,7 @@
           <div
             class="col-4 box"
             *ngIf="alcohol.value.typeOfAlcohol === 'Other'">
-            <mat-form-field class="mat_form_field">
+            <mat-form-field class="select-full-width">
               <mat-label class="mat-label-text">{{
                 currentLanguageSet?.historyData?.opdNCDPNCHistory?.obstetric
                   ?.others
@@ -409,8 +404,8 @@
             </mat-form-field>
           </div>
 
-          <div class="col-4 box padding-0-right">
-            <mat-form-field class="mat_form_field">
+          <div class="col-4 box">
+            <mat-form-field class="select-full-width">
               <mat-label class="mat-label-text">{{
                 currentLanguageSet?.historyData?.ancHistory
                   ?.personalHistoryANC_OPD_NCD_PNC?.alcoholData?.freqofAlcohol
@@ -430,14 +425,13 @@
           </div>
 
           <div class="col-4 box">
-            <mat-form-field class="mat_form_field">
+            <mat-form-field class="select-full-width">
               <mat-label class="mat-label-text">{{
                 currentLanguageSet?.historyData?.ancHistory
                   ?.personalHistoryANC_OPD_NCD_PNC?.alcoholData
                   ?.qtyofAlcoholintake
               }}</mat-label>
               <mat-select
-                class="select-full-width"
                 formControlName="avgAlcoholConsumption"
                 (selectionChange)="onChangeAvgAlcoholConsumption(alcohol)">
                 <mat-option
@@ -449,10 +443,8 @@
             </mat-form-field>
           </div>
 
-          <div class="col-4 box padding-0-left-right">
-            <mat-form-field
-              class="mat_form_field"
-              class="input-full-width mat_form_field mat_form_field_width">
+          <div class="col-2 box">
+            <mat-form-field class="input-full-width">
               <mat-label class="mat-label-text">{{
                 currentLanguageSet?.nurseData?.chiefComplaintsDetails?.duration
               }}</mat-label>
@@ -468,12 +460,11 @@
           </div>
 
           <div class="col-4 box">
-            <mat-form-field class="mat_form_field">
+            <mat-form-field class="select-full-width">
               <mat-label class="mat-label-text">{{
                 currentLanguageSet?.DurationData?.durationUnit
               }}</mat-label>
               <mat-select
-                class="select-full-width"
                 formControlName="durationUnit"
                 (selectionChange)="validateDuration(alcohol)">
                 <mat-option value="Days">Day(s)</mat-option>
@@ -485,8 +476,8 @@
           </div>
 
           <div
-            class="col-sm-2 col-md-2 box action-btn-container padding-0-left-right-al"
-            style="text-align: center">
+            class="col-8 box action-btn-container -al"
+            style="text-align: end">
             <button
               md-mini-fab
               color="warn"
@@ -539,7 +530,7 @@
         [ngClass]="{ odd: !isOdd }">
         <ng-container [formGroupName]="i">
           <div class="col-4 box">
-            <mat-form-field class="mat_form_field">
+            <mat-form-field class="select-full-width">
               <mat-label class="mat-label-text">{{
                 currentLanguageSet?.historyData?.ancHistory
                   ?.personalHistoryANC_OPD_NCD_PNC?.allergicStatus?.allergyType
@@ -557,7 +548,7 @@
             </mat-form-field>
           </div>
           <div class="col-4 row box">
-            <mat-form-field class="mat_form_field">
+            <mat-form-field class="select-full-width">
               <mat-label class="mat-label-text">{{
                 currentLanguageSet?.historyData?.ancHistory
                   ?.personalHistoryANC_OPD_NCD_PNC?.allergicStatus?.allergenName
@@ -584,7 +575,7 @@
 
           <div class="clearfix"></div>
           <div class="col-4 box" [hidden]="true">
-            <mat-form-field class="mat_form_field">
+            <mat-form-field class="select-full-width">
               <mat-label class="mat-label-text">{{
                 currentLanguageSet?.historyData?.opdNCDPNCHistory?.otherVaccine
                   ?.sctCode
@@ -598,7 +589,7 @@
           </div>
 
           <div class="col-4 box">
-            <mat-form-field class="mat_form_field">
+            <mat-form-field class="select-full-width">
               <mat-label class="mat-label-text">{{
                 currentLanguageSet?.historyData?.ancHistory
                   ?.personalHistoryANC_OPD_NCD_PNC?.allergicStatus
@@ -621,7 +612,7 @@
           </div>
 
           <div class="col-4 box" *ngIf="allergy.value.enableOtherAllergy">
-            <mat-form-field class="mat_form_field">
+            <mat-form-field class="select-full-width">
               <mat-label class="mat-label-text">{{
                 currentLanguageSet?.historyData?.opdNCDPNCHistory?.obstetric
                   ?.others
@@ -637,7 +628,7 @@
           </div>
 
           <div
-            class="col-4 box action-btn-container padding-0-left-right-al"
+            class="col-4 box action-btn-container -al"
             style="text-align: center">
             <button
               md-mini-fab

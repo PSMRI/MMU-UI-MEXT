@@ -28,13 +28,12 @@
       [ngClass]="{ odd: !isOdd }">
       <ng-container [formGroupName]="i">
         <div class="col-3 box">
-          <mat-form-field>
+          <mat-form-field class="select-full-width">
             <mat-label>{{
               currentLanguageSet?.historyData?.ancHistory
                 ?.combordityANC_OPD_NCD_PNC?.comorbidConditions
             }}</mat-label>
             <mat-select
-              class="select-full-width"
               formControlName="comorbidConditions"
               name="comorbidConditions"
               (selectionChange)="
@@ -94,12 +93,11 @@
         </div>
 
         <div class="col-3 box">
-          <mat-form-field>
+          <mat-form-field class="select-full-width">
             <mat-label class="mat-label-text">{{
               currentLanguageSet?.DurationData?.durationUnit
             }}</mat-label>
             <mat-select
-              class="select-full-width"
               name="timePeriodUnit"
               formControlName="timePeriodUnit"
               (change)="validateDuration(comorbidityConcurrentConditions)">
