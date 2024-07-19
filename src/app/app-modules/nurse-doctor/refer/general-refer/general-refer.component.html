@@ -48,12 +48,11 @@
         {{ showMsg > 0 && instituteFlag === true ? '*' : '' }}
       </div>
       <div class="col-sm-6 col-md-3 box">
-        <mat-form-field>
+        <mat-form-field style="width: 100%">
           <mat-label>{{
             currentLanguageSet?.Referdetails?.referredtoinstitute
           }}</mat-label>
           <mat-select
-            style="width: 220px"
             (ngModelChange)="higherhealthcarecenter($event)"
             name="referredToInstituteName"
             formControlName="referredToInstituteName">
@@ -71,12 +70,11 @@
         {{ currentLanguageSet?.Referdetails?.additionalservices }}
       </div>
       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-        <mat-form-field>
+        <mat-form-field style="width: 50%">
           <mat-label>{{
             currentLanguageSet?.Referdetails?.additionalservices
           }}</mat-label>
           <mat-select
-            style="width: 220px"
             (ngModelChange)="additionalservices($event)"
             multiple="true"
             name="refrredToAdditionalServiceList"
@@ -119,7 +117,7 @@
       </div>
       <ng-template #elseBlockText>
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-          <mat-form-field>
+          <mat-form-field style="width: 50%">
             <textarea
               matInput
               allowText="textAreaValidator"
@@ -138,8 +136,8 @@
       </div>
       <div
         class="col-xs-6 col-sm-6 col-md-6 col-lg-6"
-        style="padding-left: 0px; width: 280px">
-        <mat-form-field>
+        style="padding-left: 0px">
+        <mat-form-field style="width: 50%">
           <mat-label>{{
             currentLanguageSet?.Referdetails?.revisitDate
           }}</mat-label>

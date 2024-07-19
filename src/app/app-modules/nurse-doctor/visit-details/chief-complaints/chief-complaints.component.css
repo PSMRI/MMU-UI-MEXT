@@ -80,3 +80,7 @@ h5 {
 
     background-color: #f0f5f5 !important;
 } */
+table, td, th {
+    border: 1px solid #ddd;
+    border-bottom: 2px solid #ddd ;
+  }
