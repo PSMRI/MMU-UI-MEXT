@@ -30,7 +30,7 @@
 
 <div class="row" [formGroup]="generalDoctorInvestigationForm">
   <div class="col-xs-12 col-sm-6">
-    <mat-form-field>
+    <mat-form-field [style.width]="'100%'">
       <mat-label>{{
         current_language_set?.labTechnicianData?.testName
       }}</mat-label>
@@ -50,7 +50,7 @@
     </mat-form-field>
   </div>
   <div class="col-xs-12 col-sm-6">
-    <mat-form-field>
+    <mat-form-field [style.width]="'100%'">
       <mat-label>{{
         current_language_set?.labTechnicianData?.radiologyimaging
       }}</mat-label>
@@ -68,8 +68,8 @@
       </mat-select>
     </mat-form-field>
   </div>
-  <div class="col-xs-12 m-t-20">
-    <mat-form-field>
+  <div class="col-xs-12 m-t-10">
+    <mat-form-field [style.width]="'100%'">
       <mat-label>{{
         current_language_set?.Investigationdetails?.externalinvestigations
       }}</mat-label>
