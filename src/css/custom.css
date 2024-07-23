@@ -51,7 +51,7 @@
 body {
   background: #f2f2f0 !important;
   font-family: SF-UI-Display-Regular;
-  height: 100%;
+  height: auto !important;
 }
 
 input {
