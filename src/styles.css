@@ -5,7 +5,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
+/* @media (min-width:375px) {
+  .mat-mdc-card {
+    overflow: auto !important;
+}
+.searchBox {
 
+  width: 350px !important;
+}
+}
+@media (min-width:414px) {
+  .mat-mdc-card {
+    overflow: auto !important;
+}
+.searchBox {
+
+  width: 390px !important;
+}
+}
+@media (min-width:390px) {
+  .mat-mdc-card {
+    overflow: auto !important;
+}
+.searchBox {
+
+  width: 365px !important;
+}
+}
+@media (min-width:430px) {
+  .mat-mdc-card {
+    overflow: auto !important;
+}
+.searchBox {
+
+  width:405px !important;
+}
+}
+@media (min-width:360px) {
+  .mat-mdc-card {
+    overflow: auto !important;
+}
+.searchBox {
+
+  width: 350px !important;
+}
+}
+@media (min-width:412px) {
+  .mat-mdc-card {
+    overflow: auto !important;
+}
+.searchBox {
+
+  width: 387px !important;
+}
+} */
+@media screen  and (min-width:360px) and (max-width:430px) {
+  .mat-mdc-card {
+    overflow: auto !important;
+}
+.searchBox {
+
+  width: 360px !important;
+}
+button, input, optgroup, select, textarea {
+ 
+  font-size: revert !important;
+ 
+}
+}
+
+@media screen  and (min-width:768px) and (max-width:1024px) {
+  .mat-mdc-card {
+    overflow: auto !important;
+} 
+}
 .mat-input-placeholder,
 .mat-select-placeholder,
 .md2-datepicker-placeholder {
