@@ -1890,7 +1890,7 @@ input:-webkit-autofill:hover {
 
   #submitButton {
     margin: 2px;
-    width: 100%;
+    /* width: 100%; */
   }
 
   #resetButton {
