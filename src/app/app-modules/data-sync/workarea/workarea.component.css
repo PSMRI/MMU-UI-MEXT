@@ -137,8 +137,22 @@ text-align: center;
 margin-top: 30px;
 }
 .mat-mdc-tab-group.mat-background-primary, .mat-mdc-tab-nav-bar.mat-background-primary {
-  --mat-tab-header-with-background-background-color: #0277bd !important;
-  --mat-tab-header-with-background-foreground-color: white;
+  --mat-tab-header-with-background-background-color: rgba(37, 55, 70, 0.2) !important;
+  --mat-tab-header-with-background-foreground-color: black !important;
+  
+}
+.tabs_css >>>.mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+  color: black !important;
+}
+.tabs_css >>> .mat-mdc-tab-header{
+    font-weight: bold !important;
+    background-color: rgba(37, 55, 70, 0.2) !important;
+    box-shadow: inset 0px 0px 5px 2px rgba(0, 0, 0, 0.1) !important;
+
+
+}
+.tabs_css >>> .mat-mdc-tab .mdc-tab-indicator__content--underline {
+  border-color: unset !important;
 }
 .mat_form_field_width >>> .mat-mdc-text-field-wrapper {
   width: 130% !important;
