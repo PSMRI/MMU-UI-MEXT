@@ -3,10 +3,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.iemr.mmu-ui-next</groupId>
-	<artifactId>MMU-UI-NEXT</artifactId>
+	<groupId>com.iemr.mmu-ui</groupId>
+	<artifactId>MMU-UI</artifactId>
 	<version>1.0</version>
-	<name>MMU-UI-NEXT</name>
+	<name>MMU-UI</name>
 	<description>Piramal - mmu Module ui</description>
 	<packaging>war</packaging>
 	<profiles>
@@ -64,7 +64,7 @@
 	<!-- we could create individual properties similar to variables -->
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<final-name>mmu-ui-next-v1.0</final-name>
+		<final-name>mmu-ui-v3.0.0</final-name>
 		<hostname-dev>10.208.122.32</hostname-dev>
 		<port-dev>9990</port-dev>
 		<hostname-local>localhost</hostname-local>
@@ -80,7 +80,7 @@
 
 	<!-- install the necessary node_modules & compile in prod mode -->
 	<build>
-		<finalName>mmu-ui-next-v1.0</finalName>
+		<finalName>mmu-ui-v3.0.0</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-clean-plugin</artifactId>
