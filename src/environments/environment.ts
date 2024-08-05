@@ -60,7 +60,7 @@ const MMU_API = `${mmuIP}mmuapi-v1.0/`;
 //const MMU_API = `http://localhost:8080/`
 
 const TM_API = `${tmIP}tmapi-v1.0/`;
-const COMMON_API_OPEN_SYNC = `http://${SERVER_IP}:8080/commonapi-v1.0/`;
+const COMMON_API_OPEN_SYNC = `https://${SERVER_IP}/commonapi-v1.0/`;
 const SCHEDULER_API = `${schedulerIP}schedulerapi-v1.0/`;
 const FHIR_API = `${FHIRIP}/fhirapi-v1.0/`;
 
