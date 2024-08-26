@@ -25,19 +25,19 @@
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
-const commonIP = 'http://10.208.122.38:8080/';
-const tmIP = 'http://10.208.122.38:8080/';
-const mmuIP = 'http://10.208.122.38:8080/';
-const schedulerIP = 'http://10.208.122.38:8080/';
-const mmuUI_IP = 'http://10.208.122.38:8080/';
-const schedulerUI_IP = 'http://10.208.122.38:8080/';
-const inventoryUI_IP = 'http://10.208.122.38:8080/';
-const identityIP = 'http://10.208.122.38:8080/';
+const commonIP = 'https://amritwprdev.piramalswasthya.org/';
+const tmIP = 'https://amritwprdev.piramalswasthya.org/';
+const mmuIP = 'https://amritwprdev.piramalswasthya.org/';
+const schedulerIP = 'https://amritwprdev.piramalswasthya.org/';
+const mmuUI_IP = 'https://amritwprdev.piramalswasthya.org/';
+const schedulerUI_IP = 'https://amritwprdev.piramalswasthya.org/';
+const inventoryUI_IP = 'https://amritwprdev.piramalswasthya.org/';
+const identityIP = 'https://amritwprdev.piramalswasthya.org/';
 
-const SERVER_IP = 'http://10.208.122.38:8080/';
+const SERVER_IP = 'https://amritwprdev.piramalswasthya.org/';
 const SWYMED_IP = 'swymed://14.143.13.109';
-const adminIP = 'http://10.208.122.38:8080';
-const FHIRIP = 'http://183.82.107.186:8080';
+const adminIP = 'https://amritwprdev.piramalswasthya.org';
+const FHIRIP = 'https://amritwprdev.piramalswasthya.org';
 
 const ADMIN_API = `${adminIP}/adminapi-v1.0`;
 // With API MAN Configuration

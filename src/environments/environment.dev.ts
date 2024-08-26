@@ -38,7 +38,7 @@ const SERVER_IP = 'https://amritwprdev.piramalswasthya.org/';
 const SWYMED_IP = 'swymed://14.143.13.109';
 const adminIP = 'https://amritwprdev.piramalswasthya.org/';
 const ADMIN_API = `${adminIP}/adminapi-v1.0`;
-const FHIRIP = 'http://183.82.107.186:8080';
+const FHIRIP = 'https://amritwprdev.piramalswasthya.org';
 
 // With API MAN Configuration
 // const COMMON_API_OPEN = `http://${IP}:8080/apiman-gateway/IEMR/Common/open/`;
