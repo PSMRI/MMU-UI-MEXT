@@ -132,6 +132,6 @@ input::-ms-reveal,
 input::-ms-clear {
     display: none;
 }
-.mat_form_field_width >>> .mat-mdc-text-field-wrapper {
+.mat_form_field_width ::ng-deep  .mat-mdc-text-field-wrapper {
     width: 138% !important;
 }
