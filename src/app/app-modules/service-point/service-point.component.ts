@@ -383,38 +383,30 @@ export class ServicePointComponent implements OnInit, DoCheck {
   }
 
   fetchSubDistrictsOnDistrictSelection(locDetails: any) {
-    const blockList = locDetails?.userDetails?.blockList;
-    if (blockList && blockList.length > 0 && blockList[0]?.blockId) {
-      const districtID = locDetails?.userDetails?.districtID;
-      this.registrarService
-        .getSubDistrictList(districtID)
-        .subscribe((res: any) => {
-          if (res && res.statusCode === 200) {
-            this.subDistrictList = res.data;
-            this.servicePointForm.controls.districtBranchID.reset();
+    const districtID = locDetails?.userDetails?.districtID;
+    this.registrarService
+      .getSubDistrictList(districtID)
+      .subscribe((res: any) => {
+        if (res && res.statusCode === 200) {
+          this.subDistrictList = res.data;
+          this.servicePointForm.controls.districtBranchID.reset();
 
-            const blockList = locDetails?.userDetails?.blockList;
-            if (blockList && blockList.length > 0 && blockList[0]?.blockId) {
-              this.subDistrictList.forEach((blockDetails: any) => {
-                if (blockDetails.blockID === parseInt(blockList[0]?.blockId)) {
-                  this.servicePointForm.controls['blockID'].setValue(
-                    blockDetails.blockID
-                  );
-                  this.servicePointForm.controls['blockName'].setValue(
-                    blockDetails.blockName
-                  );
-                }
-              });
-              this.getVillageMaster(locDetails);
-            }
+          const blockList = locDetails?.userDetails?.blockList;
+          if (blockList && blockList.length > 0 && blockList[0]?.blockId) {
+            this.subDistrictList.forEach((blockDetails: any) => {
+              if (blockDetails.blockID === parseInt(blockList[0]?.blockId)) {
+                this.servicePointForm.controls['blockID'].setValue(
+                  blockDetails.blockID
+                );
+                this.servicePointForm.controls['blockName'].setValue(
+                  blockDetails.blockName
+                );
+              }
+            });
+            this.getVillageMaster(locDetails);
           }
-        });
-    } else {
-      this.confirmationService.alert(
-        this.currentLanguageSet.alerts.info.issuesInFetchingDemographics,
-        'error'
-      );
-    }
+        }
+      });
   }
 
   getVillageMaster(locDetails: any) {
