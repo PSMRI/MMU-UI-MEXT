@@ -337,8 +337,8 @@ export class ServicePointComponent implements OnInit, DoCheck {
         this.fetchSubDistrictsOnDistrictSelection(data);
       } else {
         this.confirmationService.alert(
-          'Please add block in worklocation mapping to proceed further',
-          'info'
+          this.currentLanguageSet.alerts.info.issuesInFetchingLocationDetails,
+          'error'
         );
       }
     } else {
