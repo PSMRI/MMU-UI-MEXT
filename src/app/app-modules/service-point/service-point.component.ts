@@ -244,7 +244,7 @@ export class ServicePointComponent implements OnInit, DoCheck {
         (servicePoint: any) => {
           return servicePoint.servicePointName
             .toLowerCase()
-            .startsWith(searchTerm.toLowerCase());
+            .startsWith(searchTerm?.toLowerCase());
         }
       );
     } else {
@@ -320,47 +320,26 @@ export class ServicePointComponent implements OnInit, DoCheck {
 
   saveDemographicsToStorage(data: any) {
     if (data) {
-      if (data.stateMaster && data.stateMaster.length >= 1) {
+      if (data?.userDetails) {
         localStorage.setItem('location', JSON.stringify(data));
         this.statesList = data.stateMaster;
         this.servicePointForm.controls.stateID.patchValue(
-          data.otherLoc.stateID
+          data?.userDetails?.stateID
         );
         this.servicePointForm.controls.stateName.patchValue(
-          data.otherLoc.stateName
+          data?.userDetails?.stateName
         );
-        this.fetchDistricts(this.servicePointForm.controls.stateID.value);
-        if (data.otherLoc.districtList) {
-          this.servicePointForm.patchValue({
-            districtID: data.otherLoc.districtList[0].districtID,
-            districtName: data.otherLoc.districtList[0].districtName,
-          });
-          this.fetchSubDistrictsOnDistrictSelection(
-            data.otherLoc.districtList[0].districtID
-          );
-          console.log('subDistrictList', this.subDistrictList);
-          console.log('data before patch', this.servicePointForm);
-          if (data.otherLoc.districtList[0].blockID) {
-            this.servicePointForm.patchValue({
-              blockID: data.otherLoc.districtList[0].blockID,
-              blockName: data.otherLoc.districtList[0].blockName,
-            });
-            console.log('data after patch', this.servicePointForm);
-            this.onSubDistrictChange(data.otherLoc.districtList[0].blockID);
-          } else {
-            this.confirmationService.alert(
-              'Please add block in worklocation mapping to proceed further',
-              'info'
-            );
-          }
-        }
+        this.servicePointForm.patchValue({
+          districtID: data?.userDetails?.districtID,
+          districtName: data?.userDetails?.districtName,
+        });
 
-        // }
-        // this.servicePointForm.controls.districtID.reset();
-        // this.servicePointForm.controls.blockID.reset();
-        // this.servicePointForm.controls.districtBranchID.reset();
+        this.fetchSubDistrictsOnDistrictSelection(data);
       } else {
-        this.locationGathetingIssues();
+        this.confirmationService.alert(
+          'Please add block in worklocation mapping to proceed further',
+          'info'
+        );
       }
     } else {
       this.locationGathetingIssues();
@@ -372,7 +351,7 @@ export class ServicePointComponent implements OnInit, DoCheck {
         this.districtList = res.data;
       } else {
         this.confirmationService.alert(
-          this.currentLanguageSet.alerts.info.IssuesInFetchingDemographics,
+          this.currentLanguageSet.alerts.info.issuesInFetchingDemographics,
           'error'
         );
       }
@@ -396,35 +375,61 @@ export class ServicePointComponent implements OnInit, DoCheck {
         this.servicePointForm.controls.districtBranchID.reset();
       } else {
         this.confirmationService.alert(
-          this.currentLanguageSet.alerts.info.IssuesInFetchingDemographics,
+          this.currentLanguageSet.alerts.info.issuesInFetchingDemographics,
           'error'
         );
       }
     });
   }
 
-  fetchSubDistrictsOnDistrictSelection(districtID: any) {
-    if (districtID) {
-      this.districtList.forEach((item: any) => {
-        if (item.districtID === districtID)
-          return this.servicePointForm.controls.districtName.setValue(
-            item.districtName
-          );
-      });
+  fetchSubDistrictsOnDistrictSelection(locDetails: any) {
+    const blockList = locDetails?.userDetails?.blockList;
+    if (blockList && blockList.length > 0 && blockList[0]?.blockId) {
+      const districtID = locDetails?.userDetails?.districtID;
+      this.registrarService
+        .getSubDistrictList(districtID)
+        .subscribe((res: any) => {
+          if (res && res.statusCode === 200) {
+            this.subDistrictList = res.data;
+            this.servicePointForm.controls.districtBranchID.reset();
+
+            const blockList = locDetails?.userDetails?.blockList;
+            if (blockList && blockList.length > 0 && blockList[0]?.blockId) {
+              this.subDistrictList.forEach((blockDetails: any) => {
+                if (blockDetails.blockID === parseInt(blockList[0]?.blockId)) {
+                  this.servicePointForm.controls['blockID'].setValue(
+                    blockDetails.blockID
+                  );
+                  this.servicePointForm.controls['blockName'].setValue(
+                    blockDetails.blockName
+                  );
+                }
+              });
+              this.getVillageMaster(locDetails);
+            }
+          }
+        });
+    } else {
+      this.confirmationService.alert(
+        this.currentLanguageSet.alerts.info.issuesInFetchingDemographics,
+        'error'
+      );
     }
-    this.registrarService
-      .getSubDistrictList(districtID)
-      .subscribe((res: any) => {
-        if (res && res.statusCode === 200) {
-          this.subDistrictList = res.data;
-          this.servicePointForm.controls.districtBranchID.reset();
-        } else {
-          this.confirmationService.alert(
-            this.currentLanguageSet.alerts.info.IssuesInFetchingDemographics,
-            'error'
-          );
-        }
-      });
+  }
+
+  getVillageMaster(locDetails: any) {
+    const blockID = locDetails?.userDetails?.blockList[0]?.blockId;
+    this.registrarService.getVillageList(blockID).subscribe((res: any) => {
+      if (res && res.statusCode === 200) {
+        this.villageList = res.data;
+        this.servicePointForm.controls.districtBranchID.reset();
+      } else {
+        this.confirmationService.alert(
+          this.currentLanguageSet.alerts.info.issuesinfetchingLocation,
+          'error'
+        );
+      }
+    });
   }
 
   onSubDistrictChange(blockID: any) {
@@ -442,7 +447,7 @@ export class ServicePointComponent implements OnInit, DoCheck {
         this.servicePointForm.controls.districtBranchID.reset();
       } else {
         this.confirmationService.alert(
-          this.currentLanguageSet.alerts.info.IssuesInFetchingLocationDetails,
+          this.currentLanguageSet.alerts.info.issuesinfetchingLocation,
           'error'
         );
       }

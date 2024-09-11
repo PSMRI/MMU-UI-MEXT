@@ -1258,7 +1258,7 @@
         "issuesinfetchingLocation": "Issues in fetching your location. Relogin & Try again",
         "RemoveTheChanges": "Are you sure to remove the changes",
         "issuesInFetchingLocationDetails": "Issues in Fetching Location Details, please try again",
-        "issuesInFetchingDemographics,": "Issues in Fetching Demographics, Please try again",
+        "issuesInFetchingDemographics": "Issues in Fetching Demographics, Please try again",
         "pleaseInputFieldFirst": "Please input for selected field first",
         "continueSession": "continueSession: Want to continue your session",
         "sessionGoingToExpire": "Your Session is Going To Expire",
