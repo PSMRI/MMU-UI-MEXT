@@ -422,4 +422,17 @@ export const environment = {
 
   /** Previous Anthropometry  Urls */
   getPreviousAnthropometryUrl: `${MMU_API}anthropometryVitals/getBenHeightDetailsFrmNurse`,
+
+  /*Load HRP Details */
+  loadHRPUrl: `${TM_API}ANC/getHRPStatus`,
+  healthIdGenerationUrl: `${FHIR_API}healthID/verifyOTPAndGenerateHealthID`,
+  healthIdGenerationWithUIDUrl: `${FHIR_API}healthIDWithUID/createHealthIDWithUID`,
+  verifyOTPUrl: `${FHIR_API}/healthIDWithUID/verifyOTP`,
+  checkAndGenerateMobileOTPUrl: `${FHIR_API}healthIDWithUID/checkAndGenerateMobileOTP`,
+  verifyMobileOTPUrl: `${FHIR_API}healthIDWithUID/verifyMobileOTP`,
+  gethealthIdDetailsUrl: `${FHIR_API}healthID/getBenhealthID`,
+  mapHealthIdUrl: `${FHIR_API}healthID/mapHealthIDToBeneficiary`,
+  otpGenerationUrl: `${FHIR_API}healthID/generateOTP`,
+  otpGenerationWithUIDUrl: `${FHIR_API}healthIDWithUID/generateOTP`,
+
 };
