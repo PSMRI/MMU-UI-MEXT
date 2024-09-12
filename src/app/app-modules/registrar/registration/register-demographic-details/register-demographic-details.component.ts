@@ -857,7 +857,7 @@ export class RegisterDemographicDetailsComponent
           this.onDistrictChangeOnLoad();
         } else {
           this.confirmationService.alert(
-            this.currentLanguageSet.alerts.info.IssuesInFetchingDemographics,
+            this.currentLanguageSet.alerts.info.issuesInFetchingDemographics,
             'error'
           );
         }
@@ -879,7 +879,7 @@ export class RegisterDemographicDetailsComponent
           this.onSubDistrictOnLoad();
         } else {
           this.confirmationService.alert(
-            this.currentLanguageSet.alerts.info.IssuesInFetchingDemographics,
+            this.currentLanguageSet.alerts.info.issuesInFetchingDemographics,
             'error'
           );
         }
@@ -905,7 +905,7 @@ export class RegisterDemographicDetailsComponent
           });
         } else {
           this.confirmationService.alert(
-            this.currentLanguageSet.alerts.info.IssuesInFetchingLocationDetails,
+            this.currentLanguageSet.alerts.info.issuesinfetchingLocation,
             'error'
           );
         }
@@ -924,7 +924,7 @@ export class RegisterDemographicDetailsComponent
           this.emptyVillage();
         } else {
           this.confirmationService.alert(
-            this.currentLanguageSet.alerts.info.issuesInFetchingLocationDetails,
+            this.currentLanguageSet.alerts.info.issuesinfetchingLocation,
             'error'
           );
         }
@@ -1063,7 +1063,7 @@ export class RegisterDemographicDetailsComponent
           this.emptyVillage();
         } else {
           this.confirmationService.alert(
-            this.currentLanguageSet.alerts.info.IssuesInFetchingDemographics,
+            this.currentLanguageSet.alerts.info.issuesInFetchingDemographics,
             'error'
           );
         }
