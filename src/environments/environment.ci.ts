@@ -51,7 +51,7 @@ export const environment = {
   haemoglobinTest: `Haemoglobin Test`,
   parentAPI: `${MMU_API}`,
 
-  INVENTORY_URL: `${INVENTORY_UI}inventory-ui-next/#/redirin?`,
+  INVENTORY_URL: `${INVENTORY_UI}inventory/#/redirin?`,
   fallbackUrl: `/pharmacist/redirfallback`,
   redirInUrl: `/pharmacist/redirin`,
 
