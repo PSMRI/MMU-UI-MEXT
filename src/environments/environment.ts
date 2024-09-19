@@ -78,8 +78,7 @@ export const environment = {
   parentAPI: `${MMU_API}`,
   abhaExtension: `@abdm`,
 
-  INVENTORY_URL:
-    'https://amritwprdev.piramalswasthya.org/inventory-ui-next/#/redirin?',
+  INVENTORY_URL: 'https://amritwprdev.piramalswasthya.org/inventory/#/redirin?',
   fallbackUrl: `/pharmacist/redirfallback`,
   redirInUrl: `/pharmacist/redirin`,
 
