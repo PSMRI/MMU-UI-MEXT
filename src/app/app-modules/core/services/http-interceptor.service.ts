@@ -39,6 +39,7 @@ export class HttpInterceptorService implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
     const key: any = sessionStorage.getItem('key');
+    const serverKey = localStorage.getItem('serverKey');
     let modifiedReq = req;
     if (req.body instanceof FormData) {
       modifiedReq = req.clone({
@@ -49,20 +50,12 @@ export class HttpInterceptorService implements HttpInterceptor {
         headers: req.headers.set('Authorization', key || ''),
       });
     } else {
-      // modifiedReq = req.clone({
-      //   headers: req.headers.set('Authorization', ''),
-      // });
-      if (key !== undefined && key !== null) {
-        modifiedReq = req.clone({
-          headers: req.headers
-            .set('Authorization', key)
-            .set('Content-Type', 'application/json'),
-        });
-      } else {
-        modifiedReq = req.clone({
-          headers: req.headers.set('Authorization', ''),
-        });
-      }
+      modifiedReq = req.clone({
+        headers: req.headers
+          .set('Authorization', key || '')
+          .set('Content-Type', 'application/json')
+          .set('ServerAuthorization', serverKey || ''),
+      });
     }
     return next.handle(modifiedReq).pipe(
       tap((event: HttpEvent<any>) => {
