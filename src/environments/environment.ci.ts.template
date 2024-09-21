@@ -35,6 +35,7 @@ const MMU_API =  '<%= MMU_API_BASE %>';
 const TM_API = '<%= TM_API_BASE %>';
 const COMMON_API_OPEN_SYNC = '<%= COMMON_API_OPEN_SYNC %>';
 const SCHEDULER_API =  '<%= SCHEDULER_API_BASE %>';
+const FHIR_API = `${FHIRIP}/fhirapi-v1.0/`;
 const SCHEDULER_UI =  '<%= SCHEDULER_UI_BASE %>';
 const INVENTORY_UI =  '<%= INVENTORY_UI_BASE %>';
 const IDENTITY_API =  '<%= IDENTITY_API_BASE %>';
