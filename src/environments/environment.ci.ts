@@ -52,7 +52,7 @@ export const environment = {
   parentAPI: `${MMU_API}`,
   abhaExtension: `@abdm`,
 
-  INVENTORY_URL: `${INVENTORY_UI}inventory-ui-next/#/redirin?`,
+  INVENTORY_URL: `${INVENTORY_UI}inventory/#/redirin?`,
   fallbackUrl: `/pharmacist/redirfallback`,
   redirInUrl: `/pharmacist/redirin`,
 

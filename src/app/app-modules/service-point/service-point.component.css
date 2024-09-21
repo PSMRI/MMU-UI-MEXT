@@ -40,7 +40,7 @@ mat-card-actions {
   display: block;
   float: right;
 }
-.mat_form_field_width >>>.mat-mdc-text-field-wrapper {
+.mat_form_field_width ::ng-deep .mat-mdc-text-field-wrapper {
   padding-right: unset !important;
 }
 .mat-form-field-width{

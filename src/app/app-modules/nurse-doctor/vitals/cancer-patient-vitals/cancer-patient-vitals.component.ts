@@ -116,7 +116,7 @@ export class CancerPatientVitalsComponent
     }
 
     this.attendant = this.route.snapshot.params['attendant'];
-    if (this.attendant == 'nurse') {
+    if (this.attendant === 'nurse') {
       this.getPreviousVisitAnthropometry();
     }
   }
