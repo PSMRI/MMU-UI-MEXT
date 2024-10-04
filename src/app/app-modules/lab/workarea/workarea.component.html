@@ -235,16 +235,16 @@
                                           </mat-radio-button>
                                         </mat-radio-group>
                                         <div>
-                                          <mat-form-field>
+                                          <mat-form-field
+                                            *ngIf="
+                                              procedure.value.procedureName.includes(
+                                                'ECG'
+                                              ) && enableEcgAbnormal
+                                            ">
                                             <mat-label
                                               >ECG Abnormalities</mat-label
                                             >
                                             <mat-select
-                                              *ngIf="
-                                                procedure.value.procedureName.includes(
-                                                  'ECG'
-                                                ) && enableEcgAbnormal
-                                              "
                                               multiple
                                               formControlName="ecgAbnormalities"
                                               style="line-height: unset"
