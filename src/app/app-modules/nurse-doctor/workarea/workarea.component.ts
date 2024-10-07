@@ -807,6 +807,10 @@ export class WorkareaComponent
     this.showPNC = false;
     this.showCaseRecord = false;
     this.showRefer = false;
+
+    if (this.attendantType === 'nurse') {
+      this.changeDetectorRef.detectChanges();
+    }
   }
 
   submitPatientMedicalDetailsForm(medicalForm: any) {
