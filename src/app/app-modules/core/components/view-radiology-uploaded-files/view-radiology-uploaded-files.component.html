@@ -5,7 +5,8 @@
     class="pull-right close-btn mat_icon_white"
     matTooltip="{{ current_language_set?.common?.close }}"
     matDialogClose
-    mat-icon-button>
+    mat-icon-button
+    aria-label="{{ current_language_set?.common?.close }}">
     <mat-icon>close</mat-icon>
   </button>
 </div>
@@ -20,8 +21,6 @@
   </tr>
   <ng-container *ngIf="fileIds[0] !== null">
     <tr *ngFor="let fileID of fileIds; let i = index" class="list-style">
-      <td class="td-style"></td>
-      <td class="td-style"></td>
       <td style="text-align: right" class="td-style">{{ i + 1 }}.</td>
       <td
         (click)="openFileContent(fileID)"

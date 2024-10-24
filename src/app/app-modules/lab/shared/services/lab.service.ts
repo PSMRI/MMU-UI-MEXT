@@ -50,7 +50,7 @@ export class LabService {
 
   viewFileContent(viewFileIndex: any) {
     return this.http.post(environment.viewFileData, viewFileIndex, {
-      responseType: 'blob' as 'json',
+      responseType: 'blob',
     });
   }
 }
