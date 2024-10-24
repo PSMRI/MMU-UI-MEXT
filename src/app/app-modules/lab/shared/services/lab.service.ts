@@ -49,9 +49,8 @@ export class LabService {
   }
 
   viewFileContent(viewFileIndex: any) {
-    // let option = new RequestOptions({ responseType: ResponseContentType.Blob});
-    // return this.http.post(environment.viewFileData, viewFileIndex, option);
-    // Need to uncomment above codes
-    return this.http.post(environment.viewFileData, viewFileIndex);
+    return this.http.post(environment.viewFileData, viewFileIndex, {
+      responseType: 'blob' as 'json',
+    });
   }
 }

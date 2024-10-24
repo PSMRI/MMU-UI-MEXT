@@ -23,6 +23,7 @@
           (change)="uploadFile($event)" />
       </span>
       <button
+        *ngIf="!disableFileSelection"
         class="mat_blue pull-right"
         mat-raised-button
         (click)="checkForDuplicateUpload()">
