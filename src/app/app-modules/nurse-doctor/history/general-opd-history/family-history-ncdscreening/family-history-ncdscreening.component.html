@@ -16,7 +16,10 @@
         <mat-icon class="md-18">history</mat-icon>
       </button>
     </div>
-    <div *ngIf="visitCategory === 'NCD screening' && age >= 30">
+    <div
+      *ngIf="
+        visitCategory === 'NCD screening' && age >= 30 && !diabetesPresent
+      ">
       <span style="color: red"
         >*{{
           currentLanguageSet?.historyData?.ancHistory
