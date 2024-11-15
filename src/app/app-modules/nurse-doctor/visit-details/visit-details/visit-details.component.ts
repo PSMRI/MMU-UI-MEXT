@@ -177,6 +177,8 @@ export class PatientVisitDetailsComponent
           if (visitCategory === 'COVID-19 Screening') {
             console.log('visitData', value.data);
             const visitDetails = value.data.covid19NurseVisitDetail;
+            this.doctorService.fileIDs =
+              value.data.covid19NurseVisitDetail.files;
             this.patientVisitDetailsForm.patchValue(visitDetails);
           }
         }
