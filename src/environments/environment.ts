@@ -20,6 +20,8 @@
  * along with this program.  If not, see https://www.gnu.org/licenses/.
  */
 
+import { keys } from './enckey';
+
 // The file contents for the current environment will overwrite these during build.
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
@@ -42,27 +44,27 @@ const adminIP = 'https://amritwprdev.piramalswasthya.org';
 const FHIRIP = 'https://amritwprdev.piramalswasthya.org';
 const IDENTITY_API = `${identityIP}/identity-0.0.1/`;
 
-const ADMIN_API = `${adminIP}/adminapi-v1.0`;
+const ADMIN_API = `${adminIP}/adminapi-v3.0.0`;
 // With API MAN Configuration
 // const COMMON_API_OPEN = `http://${IP}:8080/apiman-gateway/IEMR/Common/open/`;
 // const COMMON_API = `http://${IP}:8080/apiman-gateway/IEMR/Common/open/`;
 // const MMU_API = `http://${IP}:8080/apiman-gateway/IEMR/MMU/1.0/`;
 
 // Without API MAN Configuration
-const COMMON_API_OPEN = `${commonIP}commonapi-v1.0/`;
+const COMMON_API_OPEN = `${commonIP}commonapi-v3.0.0/`;
 
 //const COMMON_API_OPEN = `${commonIP}/`;
-const COMMON_API = `${commonIP}commonapi-v1.0/`;
+const COMMON_API = `${commonIP}commonapi-v3.0.0/`;
 //const COMMON_API = `${commonIP}/`;
-const MMU_API = `${mmuIP}mmuapi-v1.0/`;
+const MMU_API = `${mmuIP}mmuapi-v3.0.0/`;
 // const MMU_API = `http://localhost:8080/`;
 //const MMU_API = `${mmuIP}/`;
 //const MMU_API = `http://localhost:8080/`
 
-const TM_API = `${tmIP}tmapi-v1.0/`;
-const COMMON_API_OPEN_SYNC = `https://${SERVER_IP}/commonapi-v1.0/`;
-const SCHEDULER_API = `${schedulerIP}schedulerapi-v1.0/`;
-const FHIR_API = `${FHIRIP}/fhirapi-v1.0/`;
+const TM_API = `${tmIP}tmapi-v3.0.0/`;
+const COMMON_API_OPEN_SYNC = `https://${SERVER_IP}/commonapi-v3.0.0/`;
+const SCHEDULER_API = `${schedulerIP}schedulerapi-v3.0.0/`;
+const FHIR_API = `${FHIRIP}/fhirapi-v1.2/`;
 
 const mmuUICasesheet = 'https://amritwprdev.piramalswasthya.org/';
 const IOT_API = 'http://localhost:8085/ezdx-hub-connect-srv';
@@ -70,6 +72,7 @@ const IOT_API = 'http://localhost:8085/ezdx-hub-connect-srv';
 export const environment = {
   production: false,
   isMMUOfflineSync: true,
+  encKey: keys.dev,
 
   app: `MMU`,
   RBSTest: `RBS Test`,
@@ -78,11 +81,14 @@ export const environment = {
   parentAPI: `${MMU_API}`,
   abhaExtension: `@abdm`,
 
-  INVENTORY_URL: 'https://amritwprdev.piramalswasthya.org/inventory/#/redirin?',
+  INVENTORY_URL:
+    'https://amritwprdev.piramalswasthya.org/inventory-wasa/#/redirin?',
   fallbackUrl: `/pharmacist/redirfallback`,
   redirInUrl: `/pharmacist/redirin`,
 
-  TELEMEDICINE_URL: 'http://localhost:4300/#/?',
+  // TELEMEDICINE_URL: 'http://localhost:4300/#/?',
+  TELEMEDICINE_URL: `${SCHEDULER_API}scheduler-wasa/#/?`,
+
   fallbackMMUUrl: `/logout-tm`,
   redirInMMUUrl: `/common/tcspecialist-worklist`,
   licenseURL: `${COMMON_API}license.html`,
