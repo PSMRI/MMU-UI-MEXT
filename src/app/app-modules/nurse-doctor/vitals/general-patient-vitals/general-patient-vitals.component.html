@@ -600,7 +600,10 @@
                   diastolicBP_1stReading
                 )
               "
-              [required]="benAge > 30" />
+              [required]="
+                (benAge >= 30 && visitCategory === 'NCD screening') ||
+                benAge > 30
+              " />
             <svg
               class="fontawesomesvg"
               xmlns="http://www.w3.org/2000/svg"
@@ -643,7 +646,10 @@
                   diastolicBP_1stReading
                 )
               "
-              [required]="benAge > 30" />
+              [required]="
+                (benAge >= 30 && visitCategory === 'NCD screening') ||
+                benAge > 30
+              " />
             <svg
               class="fontawesomesvg"
               xmlns="http://www.w3.org/2000/svg"

@@ -322,20 +322,19 @@ export class GeneralPatientVitalsComponent
         required.push(this.currentLanguageSet.rbsTestResult);
       }
     } else {
-      if (this.visitCategory === 'ANC') {
-        if (vitalsForm.controls['systolicBP_1stReading'].errors) {
-          required.push(
-            this.currentLanguageSet.vitalsDetails.vitalsDataANC_OPD_NCD_PNC
-              .systolicBP
-          );
-        }
-        if (vitalsForm.controls['diastolicBP_1stReading'].errors) {
-          required.push(
-            this.currentLanguageSet.vitalsDetails.vitalsDataANC_OPD_NCD_PNC
-              .diastolicBP
-          );
-        }
+      if (vitalsForm.controls['systolicBP_1stReading'].errors) {
+        required.push(
+          this.currentLanguageSet.vitalsDetails.vitalsDataANC_OPD_NCD_PNC
+            .systolicBP
+        );
       }
+      if (vitalsForm.controls['diastolicBP_1stReading'].errors) {
+        required.push(
+          this.currentLanguageSet.vitalsDetails.vitalsDataANC_OPD_NCD_PNC
+            .diastolicBP
+        );
+      }
+
       if (vitalsForm.controls['height_cm'].errors) {
         required.push(
           this.currentLanguageSet.vitalsDetails.AnthropometryDataANC_OPD_NCD_PNC
@@ -730,12 +729,20 @@ export class GeneralPatientVitalsComponent
       this.patientVitalsForm.patchValue({
         systolicBP_1stReading: null,
       });
+    } else if (systolic === '' || systolic === undefined) {
+      this.patientVitalsForm.patchValue({
+        systolicBP_1stReading: null,
+      });
     }
   }
 
   checkDiastolicLower(systolic: any, diastolic: any) {
     if (systolic && diastolic && parseInt(diastolic) >= parseInt(systolic)) {
       this.confirmationService.alert(this.currentLanguageSet.alerts.info.diaBp);
+      this.patientVitalsForm.patchValue({
+        diastolicBP_1stReading: null,
+      });
+    } else if (diastolic === '' || diastolic === undefined) {
       this.patientVitalsForm.patchValue({
         diastolicBP_1stReading: null,
       });
