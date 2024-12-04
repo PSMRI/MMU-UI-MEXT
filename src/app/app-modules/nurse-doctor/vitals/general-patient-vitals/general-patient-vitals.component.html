@@ -601,7 +601,9 @@
                 )
               "
               [required]="
-                (benAge >= 30 && visitCategory === 'NCD screening') ||
+                (benAge >= 30 &&
+                  (visitCategory === 'NCD screening' ||
+                    visitCategory === 'General OPD')) ||
                 benAge > 30
               " />
             <svg
@@ -647,7 +649,9 @@
                 )
               "
               [required]="
-                (benAge >= 30 && visitCategory === 'NCD screening') ||
+                (benAge >= 30 &&
+                  (visitCategory === 'NCD screening' ||
+                    visitCategory === 'General OPD')) ||
                 benAge > 30
               " />
             <svg
