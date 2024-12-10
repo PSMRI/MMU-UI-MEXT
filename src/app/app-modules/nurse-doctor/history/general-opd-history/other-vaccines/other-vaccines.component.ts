@@ -74,7 +74,7 @@ export class OtherVaccinesComponent implements OnInit, DoCheck, OnDestroy {
     private beneficiaryDetailsService: BeneficiaryDetailsService,
     private masterdataService: MasterdataService,
     public httpServiceService: HttpServiceService,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   ngOnInit() {

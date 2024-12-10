@@ -47,7 +47,7 @@ export class CaseSheetComponent implements OnInit, DoCheck {
   constructor(
     private route: ActivatedRoute,
     public httpServiceService: HttpServiceService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private injector: Injector
   ) {}
 

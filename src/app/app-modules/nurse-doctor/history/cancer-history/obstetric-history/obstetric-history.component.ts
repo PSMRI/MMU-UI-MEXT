@@ -70,7 +70,7 @@ export class ObstetricHistoryComponent
     private doctorService: DoctorService,
     private beneficiaryDetailsService: BeneficiaryDetailsService,
     private languageComponent: SetLanguageComponent,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   ngOnInit() {

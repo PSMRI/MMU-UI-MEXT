@@ -80,7 +80,7 @@ export class RadiologistWorklistComponent
     private confirmationService: ConfirmationService,
     private beneficiaryDetailsService: BeneficiaryDetailsService,
     private doctorService: DoctorService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private httpServices: HttpServiceService
   ) {}
 

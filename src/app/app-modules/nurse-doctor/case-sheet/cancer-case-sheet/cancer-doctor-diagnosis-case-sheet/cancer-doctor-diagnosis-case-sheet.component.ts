@@ -54,7 +54,7 @@ export class CancerDoctorDiagnosisCaseSheetComponent
 
   constructor(
     public httpServiceService: HttpServiceService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private masterdataService: MasterdataService
   ) {}
 

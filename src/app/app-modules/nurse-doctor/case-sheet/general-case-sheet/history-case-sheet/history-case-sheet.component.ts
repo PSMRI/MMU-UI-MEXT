@@ -73,7 +73,7 @@ export class HistoryCaseSheetComponent implements OnInit, OnChanges, DoCheck {
   constructor(
     public datepipe: DatePipe,
     private doctorService: DoctorService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     public httpServiceService: HttpServiceService
   ) {}
 

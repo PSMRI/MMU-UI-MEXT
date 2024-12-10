@@ -58,7 +58,7 @@ export class AncComponent implements OnInit, DoCheck, OnChanges, OnDestroy {
     private confirmationService: ConfirmationService,
     public beneficiaryDetailsService: BeneficiaryDetailsService,
     private httpServiceService: HttpServiceService,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   ngOnInit() {

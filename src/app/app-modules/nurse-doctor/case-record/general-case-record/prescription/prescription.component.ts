@@ -132,7 +132,7 @@ export class PrescriptionComponent implements OnInit, OnDestroy, DoCheck {
     private confirmationService: ConfirmationService,
     private doctorService: DoctorService,
     private masterdataService: MasterdataService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private httpServiceService: HttpServiceService
   ) {}
 

@@ -50,7 +50,7 @@ export class PreviousSignificiantFindingsComponent
 
   constructor(
     private doctorService: DoctorService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private httpServiceService: HttpServiceService
   ) {}
   rowsPerPage = 5;

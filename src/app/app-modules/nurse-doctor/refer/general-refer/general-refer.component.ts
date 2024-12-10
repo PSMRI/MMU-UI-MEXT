@@ -116,7 +116,7 @@ export class GeneralReferComponent implements OnInit, DoCheck, OnDestroy {
     private nurseService: NurseService,
     private dialog: MatDialog,
     private confirmationService: ConfirmationService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private httpServices: HttpServiceService
   ) {}
 

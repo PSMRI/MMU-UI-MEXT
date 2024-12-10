@@ -77,7 +77,7 @@ export class MedicationHistoryComponent implements OnInit, OnDestroy, DoCheck {
     private beneficiaryDetailsService: BeneficiaryDetailsService,
     public httpServiceService: HttpServiceService,
     private changeDetectorRef: ChangeDetectorRef,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   ngOnInit() {

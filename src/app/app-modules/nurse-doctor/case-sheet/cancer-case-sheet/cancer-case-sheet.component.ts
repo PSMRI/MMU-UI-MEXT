@@ -61,7 +61,7 @@ export class CancerCaseSheetComponent implements OnInit, OnDestroy, DoCheck {
     private location: Location,
     private route: ActivatedRoute,
     private confirmationService: ConfirmationService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private httpServiceService: HttpServiceService
   ) {}
 

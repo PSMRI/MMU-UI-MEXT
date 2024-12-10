@@ -67,7 +67,7 @@ export class InvestigationsComponent implements OnInit, DoCheck, OnDestroy {
     private masterdataService: MasterdataService,
     private doctorService: DoctorService,
     private httpServices: HttpServiceService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private nurseService: NurseService
   ) {}
 

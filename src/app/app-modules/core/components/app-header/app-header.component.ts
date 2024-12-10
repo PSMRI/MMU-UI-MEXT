@@ -89,7 +89,7 @@ export class AppHeaderComponent implements OnInit {
     private auth: AuthService,
     private confirmationService: ConfirmationService,
     public service: IotService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private http_service: HttpServiceService
   ) {}
 

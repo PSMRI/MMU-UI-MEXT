@@ -60,7 +60,7 @@ export class DiseaseconfirmationComponent implements OnInit {
     private idrsScoreService: IdrsscoreService,
     private doctorService: DoctorService,
     private nurseService: NurseService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private route: ActivatedRoute
   ) {}
 

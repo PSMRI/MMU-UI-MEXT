@@ -98,7 +98,7 @@ export class RegistrationComponent
     private route: ActivatedRoute,
     private changeDetectorRef: ChangeDetectorRef,
     private languageComponent: SetLanguageComponent,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   ngOnInit() {

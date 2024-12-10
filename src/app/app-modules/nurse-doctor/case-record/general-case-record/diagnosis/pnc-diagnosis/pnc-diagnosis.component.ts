@@ -116,7 +116,7 @@ export class PncDiagnosisComponent
     private beneficiaryDetailsService: BeneficiaryDetailsService,
     private doctorService: DoctorService,
     private httpServiceService: HttpServiceService,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   beneficiaryAge: any;

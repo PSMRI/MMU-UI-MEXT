@@ -20,7 +20,7 @@
  * along with this program.  If not, see https://www.gnu.org/licenses/.
  */
 
-import { keys } from './enckey';
+// import { keys } from './enckey';
 
 // The file contents for the current environment will overwrite these during build.
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
@@ -41,6 +41,7 @@ const SWYMED_IP = 'swymed://14.143.13.109';
 const adminIP = 'https://amritwprdev.piramalswasthya.org/';
 const ADMIN_API = `${adminIP}/adminapi-v3.0.0`;
 const FHIRIP = 'https://amritwprdev.piramalswasthya.org';
+const sessionStorageEncKey = '<%= SESSION_STORAGE_ENC_KEY %>';
 
 // With API MAN Configuration
 // const COMMON_API_OPEN = `http://${IP}:8080/apiman-gateway/IEMR/Common/open/`;
@@ -62,7 +63,7 @@ const IOT_API = 'http://localhost:8085/ezdx-hub-connect-srv';
 
 export const environment = {
   production: true,
-  encKey: keys.dev,
+  encKey: sessionStorageEncKey,
 
   isMMUOfflineSync: false,
 

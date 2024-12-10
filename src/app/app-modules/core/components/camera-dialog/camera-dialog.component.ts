@@ -96,7 +96,7 @@ export class CameraDialogComponent implements OnInit, DoCheck, AfterViewInit {
   constructor(
     public dialogRef: MatDialogRef<CameraDialogComponent>,
     public httpServiceService: HttpServiceService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private confirmationService: ConfirmationService
   ) {
     this.options = {

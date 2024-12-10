@@ -68,7 +68,7 @@ export class CancerHistoryComponent
     private doctorService: DoctorService,
     private confirmationService: ConfirmationService,
     private beneficiaryDetailsService: BeneficiaryDetailsService,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   ngOnInit() {

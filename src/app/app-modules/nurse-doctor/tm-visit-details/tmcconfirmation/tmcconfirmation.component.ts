@@ -90,7 +90,7 @@ export class TmcconfirmationComponent implements OnInit, DoCheck, OnDestroy {
     private doctorService: DoctorService,
     private dialog: MatDialog,
     private idrsScoreService: IdrsscoreService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private httpServices: HttpServiceService
   ) {}
 

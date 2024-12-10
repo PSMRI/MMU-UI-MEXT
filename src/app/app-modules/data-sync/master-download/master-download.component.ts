@@ -40,7 +40,7 @@ export class MasterDownloadComponent implements OnInit {
     public dialogRef: MatDialogRef<MasterDownloadComponent>,
     private confirmationService: ConfirmationService,
     private dataSyncService: DataSyncService,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   ngOnInit() {

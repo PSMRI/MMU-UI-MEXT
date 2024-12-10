@@ -113,7 +113,7 @@ export class GeneralPersonalHistoryComponent
     private masterdataService: MasterdataService,
     public httpServiceService: HttpServiceService,
     private changeDetectorRef: ChangeDetectorRef,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   ngOnInit() {

@@ -86,7 +86,7 @@ export class UploadFilesComponent implements OnInit, DoCheck, OnChanges {
     private labService: LabService,
     private confirmationService: ConfirmationService,
     private doctorService: DoctorService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private dialog: MatDialog
   ) {}
 

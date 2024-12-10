@@ -42,7 +42,7 @@ export class BeneficiaryDetailsComponent implements OnInit, DoCheck, OnDestroy {
     private router: Router,
     private route: ActivatedRoute,
     public httpServiceService: HttpServiceService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private beneficiaryDetailsService: BeneficiaryDetailsService
   ) {}
 

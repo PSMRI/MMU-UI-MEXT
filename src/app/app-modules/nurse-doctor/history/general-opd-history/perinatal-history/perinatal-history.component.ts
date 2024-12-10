@@ -59,7 +59,7 @@ export class PerinatalHistoryComponent implements OnInit, DoCheck, OnDestroy {
     private dialog: MatDialog,
     private confirmationService: ConfirmationService,
     public httpServiceService: HttpServiceService,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   ngOnInit() {

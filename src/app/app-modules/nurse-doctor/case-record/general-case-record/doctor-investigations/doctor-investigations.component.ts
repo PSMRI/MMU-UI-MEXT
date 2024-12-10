@@ -90,7 +90,7 @@ export class DoctorInvestigationsComponent
     private idrsScoreService: IdrsscoreService,
     private httpServiceService: HttpServiceService,
     private nurseService: NurseService,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   ngOnInit() {

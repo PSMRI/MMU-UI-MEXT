@@ -59,7 +59,7 @@ export class LoginComponent implements OnInit {
     private authService: AuthService,
     private confirmationService: ConfirmationService,
     private fb: FormBuilder,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private cookieService: CookieService
   ) {
     this._keySize = 256;

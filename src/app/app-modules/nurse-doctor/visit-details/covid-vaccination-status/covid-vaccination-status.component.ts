@@ -55,7 +55,7 @@ export class CovidVaccinationStatusComponent implements OnInit, DoCheck {
     private nurseService: NurseService,
     private confirmationService: ConfirmationService,
     private masterdataService: MasterdataService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private doctorService: DoctorService
   ) {}
   @Input()

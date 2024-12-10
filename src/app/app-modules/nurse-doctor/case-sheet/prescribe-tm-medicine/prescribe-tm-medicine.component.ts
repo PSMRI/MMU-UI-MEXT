@@ -123,7 +123,7 @@ export class PrescribeTmMedicineComponent implements OnInit, DoCheck {
     private fb: FormBuilder,
     public httpServiceService: HttpServiceService,
     private confirmationService: ConfirmationService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private doctorService: DoctorService
   ) {}
 

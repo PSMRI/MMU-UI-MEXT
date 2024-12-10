@@ -98,7 +98,7 @@ export class AncImmunizationComponent
   constructor(
     private beneficiaryDetailsService: BeneficiaryDetailsService,
     private httpServiceService: HttpServiceService,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   ngOnInit() {

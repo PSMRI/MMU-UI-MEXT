@@ -165,7 +165,7 @@ export class WorkareaComponent
     private route: ActivatedRoute,
     private beneficiaryDetailsService: BeneficiaryDetailsService,
     private mdDialog: MatDialog,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private idrsScoreService: IdrsscoreService,
     private languageComponent: SetLanguageComponent
   ) {}

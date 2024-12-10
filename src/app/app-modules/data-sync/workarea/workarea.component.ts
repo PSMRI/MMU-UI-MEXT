@@ -58,7 +58,7 @@ export class WorkareaComponent
     private dataSyncService: DataSyncService,
     private fb: FormBuilder,
     private httpServiceService: HttpServiceService,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   syncTableGroupList: any = [];

@@ -35,7 +35,7 @@ export class ResetPasswordComponent {
   constructor(
     private router: Router,
     private authService: AuthService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private confirmationService: ConfirmationService
   ) {}
 

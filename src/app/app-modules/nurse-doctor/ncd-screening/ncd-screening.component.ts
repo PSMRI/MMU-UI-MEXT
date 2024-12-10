@@ -135,7 +135,7 @@ export class NcdScreeningComponent
     private nurseService: NurseService,
     private router: Router,
     private httpServices: HttpServiceService,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   patientVisitForm!: FormGroup;

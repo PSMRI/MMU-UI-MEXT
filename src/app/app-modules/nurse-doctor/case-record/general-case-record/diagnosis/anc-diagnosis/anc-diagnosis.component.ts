@@ -94,7 +94,7 @@ export class AncDiagnosisComponent implements OnInit, DoCheck, OnDestroy {
     private masterdataService: MasterdataService,
     public beneficiaryDetailsService: BeneficiaryDetailsService,
     private httpServiceService: HttpServiceService,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   ngOnInit() {

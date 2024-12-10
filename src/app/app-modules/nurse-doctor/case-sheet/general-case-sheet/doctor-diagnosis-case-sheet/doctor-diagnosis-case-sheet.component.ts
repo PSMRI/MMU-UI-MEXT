@@ -106,7 +106,7 @@ export class DoctorDiagnosisCaseSheetComponent
     private doctorService: DoctorService,
     private nurseService: NurseService,
     public httpServiceService: HttpServiceService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private masterdataService: MasterdataService
   ) {}
 

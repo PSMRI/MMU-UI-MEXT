@@ -97,7 +97,7 @@ export class MenstrualHistoryComponent implements OnInit, DoCheck, OnDestroy {
     private confirmationService: ConfirmationService,
     private masterdataService: MasterdataService,
     public httpServiceService: HttpServiceService,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   ngOnInit() {

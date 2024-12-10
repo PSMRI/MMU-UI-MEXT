@@ -83,7 +83,7 @@ export class GeneralOpdHistoryComponent
     private doctorService: DoctorService,
     private confirmationService: ConfirmationService,
     public httpServiceService: HttpServiceService,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   ngOnInit() {

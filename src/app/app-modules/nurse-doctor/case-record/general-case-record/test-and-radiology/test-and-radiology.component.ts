@@ -64,7 +64,7 @@ export class TestAndRadiologyComponent implements OnInit, OnDestroy, DoCheck {
     private labService: LabService,
     private idrsScoreService: IdrsscoreService,
     private httpServiceService: HttpServiceService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private testInVitalsService: TestInVitalsService
   ) {}
 

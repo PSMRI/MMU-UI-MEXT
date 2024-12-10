@@ -86,7 +86,7 @@ export class CancerReferComponent implements OnInit, DoCheck, OnDestroy {
   constructor(
     private doctorService: DoctorService,
     private masterdataService: MasterdataService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private httpServices: HttpServiceService
   ) {}
 

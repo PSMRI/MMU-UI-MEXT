@@ -52,7 +52,7 @@ export class RegisterEditLocationComponent implements OnInit, DoCheck {
     private confirmationService: ConfirmationService,
     private httpServiceService: HttpServiceService,
     private fb: FormBuilder,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private languageComponent: SetLanguageComponent
   ) {}
 

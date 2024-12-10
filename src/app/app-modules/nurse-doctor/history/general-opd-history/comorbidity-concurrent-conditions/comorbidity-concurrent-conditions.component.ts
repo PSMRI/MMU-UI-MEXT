@@ -75,7 +75,7 @@ export class ComorbidityConcurrentConditionsComponent
     private confirmationService: ConfirmationService,
     private masterdataService: MasterdataService,
     public httpServiceService: HttpServiceService,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   ngOnInit() {

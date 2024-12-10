@@ -62,7 +62,7 @@ export class NcdCareDiagnosisComponent implements OnInit, DoCheck {
     private httpServiceService: HttpServiceService,
     private route: ActivatedRoute,
     private confirmationService: ConfirmationService,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   ngOnInit() {

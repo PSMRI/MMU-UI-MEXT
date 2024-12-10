@@ -33,7 +33,7 @@ import { SessionStorageService } from 'Common-UI/src/registrar/services/session-
 export class WorkareaCanActivate implements CanActivate {
   constructor(
     private router: Router,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {

@@ -52,7 +52,7 @@ export class GeneralOpdDiagnosisComponent implements OnChanges, DoCheck {
     private doctorService: DoctorService,
     private confirmationService: ConfirmationService,
     private httpServiceService: HttpServiceService,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   ngOnChanges() {

@@ -95,7 +95,7 @@ export class PncComponent implements OnInit, DoCheck, OnChanges, OnDestroy {
     private confirmationService: ConfirmationService,
     private masterdataService: MasterdataService,
     private httpServices: HttpServiceService,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   ngOnInit() {

@@ -59,7 +59,7 @@ export class IotcomponentComponent implements OnInit, DoCheck {
     public dialogRef: MatDialogRef<IotcomponentComponent>,
     public service: IotService,
     private confirmationService: ConfirmationService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private dialog: MatDialog
   ) {}
 

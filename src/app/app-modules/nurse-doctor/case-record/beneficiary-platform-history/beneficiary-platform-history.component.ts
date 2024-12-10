@@ -104,7 +104,7 @@ export class BeneficiaryPlatformHistoryComponent implements OnInit, DoCheck {
     private confirmationService: ConfirmationService,
     private dialog: MatDialog,
     private httpServiceService: HttpServiceService,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   ngOnInit() {

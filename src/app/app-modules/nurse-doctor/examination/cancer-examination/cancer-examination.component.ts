@@ -65,7 +65,7 @@ export class CancerExaminationComponent
     private httpServiceService: HttpServiceService,
     private doctorService: DoctorService,
     private confirmationService: ConfirmationService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private beneficiaryDetailsService: BeneficiaryDetailsService
   ) {}
 

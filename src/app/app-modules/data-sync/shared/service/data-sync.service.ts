@@ -29,7 +29,7 @@ import { environment } from 'src/environments/environment';
 export class DataSyncService {
   constructor(
     private http: HttpClient,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   getDataSYNCGroup() {

@@ -59,7 +59,7 @@ export class SystemicExaminationComponent
   constructor(
     private fb: FormBuilder,
     private httpServiceService: HttpServiceService,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   ngOnInit() {

@@ -182,7 +182,7 @@ export class QuickConsultComponent
     private httpServices: HttpServiceService,
     private nurseService: NurseService,
     private dialog: MatDialog,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private testInVitalsService: TestInVitalsService
   ) {}
 

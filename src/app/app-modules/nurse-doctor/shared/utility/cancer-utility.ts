@@ -27,7 +27,7 @@ export class CancerUtils {
   // serviceLineDetails: any = null;
   constructor(
     private fb: FormBuilder,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   ngOnInIt() {

@@ -65,7 +65,7 @@ export class PatientVisitDetailsComponent
     private masterdataService: MasterdataService,
     private doctorService: DoctorService,
     private beneficiaryDetailsService: BeneficiaryDetailsService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private languageComponent: SetLanguageComponent
   ) {}
 

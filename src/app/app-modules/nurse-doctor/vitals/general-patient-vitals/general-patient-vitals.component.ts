@@ -135,7 +135,7 @@ export class GeneralPatientVitalsComponent
     private audioRecordingService: AudioRecordingService,
     private testInVitalsService: TestInVitalsService,
     private sanitizer: DomSanitizer,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private languageComponent: SetLanguageComponent,
     private route: ActivatedRoute
   ) {

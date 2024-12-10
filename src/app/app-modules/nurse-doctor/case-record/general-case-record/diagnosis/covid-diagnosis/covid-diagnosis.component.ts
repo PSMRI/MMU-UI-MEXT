@@ -52,7 +52,7 @@ export class CovidDiagnosisComponent implements OnInit, DoCheck, OnChanges {
     private fb: FormBuilder,
     private doctorService: DoctorService,
     private httpServiceService: HttpServiceService,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   ngOnInit() {

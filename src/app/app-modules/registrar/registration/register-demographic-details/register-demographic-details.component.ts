@@ -92,7 +92,7 @@ export class RegisterDemographicDetailsComponent
     private httpServiceService: HttpServiceService,
     private router: Router,
     private dialog: MatDialog,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private languageComponent: SetLanguageComponent,
     private fb: FormBuilder
   ) {}

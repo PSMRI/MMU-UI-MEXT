@@ -86,7 +86,7 @@ export class PastHistoryComponent implements OnInit, DoCheck, OnDestroy {
     private doctorService: DoctorService,
     private masterdataService: MasterdataService,
     public httpServiceService: HttpServiceService,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   ngOnInit() {

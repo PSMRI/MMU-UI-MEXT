@@ -33,7 +33,7 @@ export class HttpInterceptorService implements HttpInterceptor {
     private spinnerService: SpinnerService,
     private router: Router,
     private confirmationService: ConfirmationService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private http: HttpClient,
     private cookieService: CookieService
   ) {}

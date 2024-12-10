@@ -71,7 +71,7 @@ export class SignsAndSymptomsComponent implements OnInit, DoCheck, OnDestroy {
   constructor(
     private fb: FormBuilder,
     private httpServiceService: HttpServiceService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private beneficiaryDetailsService: BeneficiaryDetailsService
   ) {}
 

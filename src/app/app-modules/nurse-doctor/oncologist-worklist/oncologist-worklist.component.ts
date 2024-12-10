@@ -73,7 +73,7 @@ export class OncologistWorklistComponent implements OnInit, DoCheck {
     private beneficiaryDetailsService: BeneficiaryDetailsService,
     private doctorService: DoctorService,
     private httpServices: HttpServiceService,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   ngOnInit() {

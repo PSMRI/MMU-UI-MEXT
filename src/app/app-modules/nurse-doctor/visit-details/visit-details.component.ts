@@ -63,7 +63,7 @@ export class VisitDetailsComponent implements OnInit, DoCheck {
 
   constructor(
     private httpServiceService: HttpServiceService,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   ngOnInit() {

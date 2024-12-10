@@ -94,7 +94,7 @@ export class TravelHistoryComponent
     private nurseService: NurseService,
     private httpServiceService: HttpServiceService,
     private doctorService: DoctorService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private fb: FormBuilder
   ) {
     this.masterdataService.listen().subscribe((m: any) => {

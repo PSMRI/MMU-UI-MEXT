@@ -62,7 +62,7 @@ export class ExaminationCaseSheetComponent
 
   constructor(
     private httpServiceService: HttpServiceService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     public datepipe: DatePipe
   ) {}
 

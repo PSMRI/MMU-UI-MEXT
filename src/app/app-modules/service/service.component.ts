@@ -44,7 +44,7 @@ export class ServiceComponent implements OnInit, DoCheck {
     private languageComponent: SetLanguageComponent,
     private router: Router,
     private confirmationService: ConfirmationService,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   ngOnInit() {

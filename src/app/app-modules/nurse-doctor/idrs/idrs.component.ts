@@ -130,7 +130,7 @@ export class IdrsComponent implements OnInit, OnDestroy, DoCheck, OnChanges {
     private nurseService: NurseService,
     private doctorService: DoctorService,
     public httpServiceService: HttpServiceService,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
   ngOnInit() {
     this.assignSelectedLanguage();

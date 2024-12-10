@@ -58,7 +58,7 @@ export class PersonalHistoryComponent implements OnInit, OnDestroy, DoCheck {
     private masterdataService: MasterdataService,
     private beneficiaryDetailsService: BeneficiaryDetailsService,
     private languageComponent: SetLanguageComponent,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   templateNurseMasterData: any;

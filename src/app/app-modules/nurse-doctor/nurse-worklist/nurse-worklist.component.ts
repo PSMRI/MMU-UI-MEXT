@@ -78,7 +78,7 @@ export class NurseWorklistComponent implements OnInit, DoCheck, OnDestroy {
     private cameraService: CameraService,
     private beneficiaryDetailsService: BeneficiaryDetailsService,
     private httpServices: HttpServiceService,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   ngOnInit() {

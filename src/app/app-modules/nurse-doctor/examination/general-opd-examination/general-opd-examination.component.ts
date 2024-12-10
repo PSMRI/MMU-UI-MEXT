@@ -60,7 +60,7 @@ export class GeneralOpdExaminationComponent
   constructor(
     private httpServiceService: HttpServiceService,
     private doctorService: DoctorService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private confirmationService: ConfirmationService
   ) {}
 

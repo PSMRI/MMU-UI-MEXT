@@ -82,7 +82,7 @@ export class ReportsComponent implements OnInit, DoCheck {
     private masterdataService: MasterdataService,
     private confirmationService: ConfirmationService,
     private formBuilder: FormBuilder,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private httpServices: HttpServiceService
   ) {}
   today!: Date;

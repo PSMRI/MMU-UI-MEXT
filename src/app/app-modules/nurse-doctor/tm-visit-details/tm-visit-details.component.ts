@@ -52,7 +52,7 @@ export class TmVisitDetailsComponent implements OnInit, DoCheck, OnDestroy {
     private masterdataService: MasterdataService,
     private doctorService: DoctorService,
     private router: Router,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private httpServices: HttpServiceService
   ) {}
 

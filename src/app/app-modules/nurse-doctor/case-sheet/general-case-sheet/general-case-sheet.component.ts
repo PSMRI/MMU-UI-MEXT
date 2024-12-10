@@ -67,7 +67,7 @@ export class GeneralCaseSheetComponent implements OnInit, OnDestroy, DoCheck {
     private doctorService: DoctorService,
     private route: ActivatedRoute,
     private nurseService: NurseService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private confirmationService: ConfirmationService
   ) {}
 

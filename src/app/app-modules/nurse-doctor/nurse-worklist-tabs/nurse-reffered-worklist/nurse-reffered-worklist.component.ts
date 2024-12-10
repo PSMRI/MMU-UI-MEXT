@@ -65,7 +65,7 @@ export class NurseRefferedWorklistComponent implements OnInit, DoCheck {
     private httpServices: HttpServiceService,
     private cameraService: CameraService,
     private beneficiaryDetailsService: BeneficiaryDetailsService,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   ngOnInit() {

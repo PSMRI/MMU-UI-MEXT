@@ -80,7 +80,7 @@ export class WorklistComponent implements OnInit, OnDestroy, DoCheck {
     private pharmacistService: PharmacistService,
     private cameraService: CameraService,
     private inventoryService: InventoryService,
-    private sessionstorage: SessionStorageService
+    readonly sessionstorage: SessionStorageService
   ) {}
 
   ngOnInit() {

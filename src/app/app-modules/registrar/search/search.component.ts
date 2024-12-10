@@ -83,7 +83,7 @@ export class SearchComponent implements OnInit, DoCheck {
     private registrarService: RegistrarService,
     private cameraService: CameraService,
     private router: Router,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private beneficiaryDetailsService: BeneficiaryDetailsService
   ) {}
 

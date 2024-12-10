@@ -79,7 +79,7 @@ export class DoctorWorklistComponent implements OnInit, OnDestroy, DoCheck {
     private confirmationService: ConfirmationService,
     private httpServiceService: HttpServiceService,
     private beneficiaryDetailsService: BeneficiaryDetailsService,
-    private sessionstorage: SessionStorageService,
+    readonly sessionstorage: SessionStorageService,
     private doctorService: DoctorService
   ) {}
 
