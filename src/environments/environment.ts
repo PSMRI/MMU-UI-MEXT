@@ -40,7 +40,7 @@ const SERVER_IP = 'amritwprdev.piramalswasthya.org';
 const SWYMED_IP = 'swymed://14.143.13.109';
 const adminIP = 'https://amritwprdev.piramalswasthya.org';
 const FHIRIP = 'https://amritwprdev.piramalswasthya.org';
-const IDENTITY_API = `${identityIP}/identity-0.0.1/`;
+const IDENTITY_API = `${identityIP}identity-0.0.1/`;
 
 const ADMIN_API = `${adminIP}/adminapi-v1.0`;
 // With API MAN Configuration
@@ -418,7 +418,7 @@ export const environment = {
   startBloodGlucoseurl: '/api/v1/wbpoct_tests/blood_glucose',
   startRBSurl: '/api/v1/wbpoct_tests/blood_glucose',
   // Check availability of benIDs
-  getBenIDs: `${identityIP}identity-0.0.1/id/checkAvailablBenIDLocalServer`,
+  getBenIDs: `${IDENTITY_API}id/checkAvailablBenIDLocalServer`,
   generateBenID: `${MMU_API}dataSyncActivity/callCentralAPIToGenerateBenIDAndimportToLocal`,
 
   // Inventory Data Sync Download
