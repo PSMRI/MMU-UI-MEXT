@@ -275,7 +275,6 @@ export class WorklistComponent implements OnInit, OnDestroy, DoCheck {
             'visitCode',
             beneficiary.labObject.visitCode
           );
-          console.error('beneficiary.labObject.specialist_flag ', beneficiary);
           if (
             beneficiary.labObject.specialist_flag &&
             beneficiary.labObject.specialist_flag >= 0

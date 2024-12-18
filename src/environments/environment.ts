@@ -45,7 +45,7 @@ const FHIRIP = 'https://amritwprdev.piramalswasthya.org';
 const IDENTITY_API = `${identityIP}/identity-0.0.1/`;
 
 const ADMIN_API = `${adminIP}/adminapi-v3.0.0`;
-const sessionStorageEncKey = '<%= SESSION_STORAGE_ENC_KEY %>';
+const sessionStorageEncKey = 'asdfghjkoiuytfdcvbhj';
 // With API MAN Configuration
 // const COMMON_API_OPEN = `http://${IP}:8080/apiman-gateway/IEMR/Common/open/`;
 // const COMMON_API = `http://${IP}:8080/apiman-gateway/IEMR/Common/open/`;
@@ -65,7 +65,7 @@ const MMU_API = `${mmuIP}mmuapi-v3.0.0/`;
 const TM_API = `${tmIP}tmapi-v3.0.0/`;
 const COMMON_API_OPEN_SYNC = `https://${SERVER_IP}/commonapi-v3.0.0/`;
 const SCHEDULER_API = `${schedulerIP}schedulerapi-v3.0.0/`;
-const FHIR_API = `${FHIRIP}/fhirapi-v1.2/`;
+const FHIR_API = `${FHIRIP}/fhirapi-v3.0.0/`;
 
 const mmuUICasesheet = 'https://amritwprdev.piramalswasthya.org/';
 const IOT_API = 'http://localhost:8085/ezdx-hub-connect-srv';

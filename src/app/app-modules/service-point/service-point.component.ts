@@ -308,10 +308,8 @@ export class ServicePointComponent implements OnInit, DoCheck {
           .getMMUDemographics(spID, spPSMID, userId)
           .subscribe((res: any) => {
             if (res && res.statusCode === 200) {
-              console.error('saveDemographicsToStorage', res.data);
               this.saveDemographicsToStorage(res.data);
             } else {
-              console.error('start---1');
               this.locationGathetingIssues();
             }
           });
@@ -352,7 +350,6 @@ export class ServicePointComponent implements OnInit, DoCheck {
         );
       }
     } else {
-      console.error('start--2');
       this.locationGathetingIssues();
     }
   }

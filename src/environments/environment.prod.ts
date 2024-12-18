@@ -39,7 +39,7 @@ const SERVER_IP = 'https://amritwprdev.piramalswasthya.org/';
 const SWYMED_IP = 'swymed://14.143.13.109';
 const adminIP = 'https://amritwprdev.piramalswasthya.org/';
 const FHIRIP = 'https://amritwprdev.piramalswasthya.org';
-const sessionStorageEncKey = '<%= SESSION_STORAGE_ENC_KEY %>';
+const sessionStorageEncKey = '<>';
 
 const ADMIN_API = `${adminIP}/adminapi-v3.0.0/`;
 // With API MAN Configuration

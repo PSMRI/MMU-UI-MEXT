@@ -41,7 +41,7 @@ const SWYMED_IP = 'swymed://14.143.13.109';
 const adminIP = 'https://amritwprdev.piramalswasthya.org/';
 const ADMIN_API = `${adminIP}/adminapi-v3.0.0`;
 const FHIRIP = 'https://amritwprdev.piramalswasthya.org';
-const sessionStorageEncKey = '<%= SESSION_STORAGE_ENC_KEY %>';
+const sessionStorageEncKey = '<>';
 
 // With API MAN Configuration
 // const COMMON_API_OPEN = `http://${IP}:8080/apiman-gateway/IEMR/Common/open/`;

@@ -43,26 +43,18 @@ export class HttpInterceptorService implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
     const key: any = sessionStorage.getItem('key');
-    const tkn: any = this.cookieService.get('Jwttoken');
     const serverKey = this.sessionstorage.getItem('serverKey');
     let modifiedReq = req;
     if (req.body instanceof FormData) {
       modifiedReq = req.clone({
-        // headers: req.headers
-        //   .set('Authorization', key || '')
-        //   .set('ServerAuthorization', key)
-        //   .set('Content-Type', 'application/json'),
-        headers: req.headers
-          .set('Authorization', key || '')
-          .set('Jwttoken', tkn),
+        headers: req.headers.set('Authorization', key || ''),
       });
     } else {
       modifiedReq = req.clone({
         headers: req.headers
           .set('Authorization', key || '')
           .set('Content-Type', 'application/json')
-          .set('ServerAuthorization', serverKey || '')
-          .set('Jwttoken', tkn),
+          .set('ServerAuthorization', serverKey || ''),
       });
     }
     return next.handle(modifiedReq).pipe(
