@@ -236,8 +236,6 @@ export class ServicePointComponent implements OnInit, DoCheck {
     if (index !== -1) {
       this.sessionstorage.setItem('vanType', vanDetail.substring(index + 2));
     }
-
-    console.log('van', this.sessionstorage.getItem('vanType'));
   }
 
   filterServicePointVan(searchTerm: any) {
@@ -255,8 +253,6 @@ export class ServicePointComponent implements OnInit, DoCheck {
   }
 
   routeToDesignation(designation: any) {
-    console.log('designation', designation);
-
     switch (designation) {
       case 'Registrar':
         this.router.navigate(['/registrar/search']);
@@ -289,8 +285,10 @@ export class ServicePointComponent implements OnInit, DoCheck {
         item.servicePointName ===
         this.servicePointForm.controls.servicePointName.value
     );
+    let spIDs = '';
     if (temp.length > 0) {
       this.sessionstorage.setItem('servicePointID', temp[0].servicePointID);
+      spIDs = temp[0].servicePointID;
       this.servicePointForm.controls.servicePointID.patchValue(
         temp[0].servicePointID
       );
@@ -299,9 +297,7 @@ export class ServicePointComponent implements OnInit, DoCheck {
           'servicePointName',
           this.servicePointForm.controls.servicePointName.value
         );
-        console.log('data before call', this.servicePointForm);
-
-        const spID = this.sessionstorage.getItem('servicePointID');
+        const spID = spIDs;
         const spPSMID = this.sessionstorage.getItem('providerServiceID');
         const userId = this.sessionstorage.getItem('userID');
         this.servicePointService
@@ -367,7 +363,6 @@ export class ServicePointComponent implements OnInit, DoCheck {
   }
 
   fetchDistrictsOnStateSelection(stateID: any) {
-    console.log('stateID', stateID);
     if (stateID) {
       this.statesList.forEach((item: any) => {
         if (item.stateID === stateID)
