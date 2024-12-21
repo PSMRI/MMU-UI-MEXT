@@ -37,7 +37,7 @@ const SCHEDULER_API = '<%= SCHEDULER_API_BASE %>';
 const SCHEDULER_UI = '<%= SCHEDULER_UI_BASE %>';
 const INVENTORY_UI = '<%= INVENTORY_UI_BASE %>';
 const IDENTITY_API = '<%= IDENTITY_API_BASE %>';
-const sessionStorageEncKey = '<%= SESSION_STORAGE_ENC_KEY %>';
+const sessionStorageEncKey = '';
 
 const mmuUICasesheet = '<%= MMU_UI_BASE %>';
 const IOT_API = 'http://localhost:8085/ezdx-hub-connect-srv';

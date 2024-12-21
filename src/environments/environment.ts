@@ -45,7 +45,7 @@ const FHIRIP = 'https://amritwprdev.piramalswasthya.org';
 const IDENTITY_API = `${identityIP}/identity-0.0.1/`;
 
 const ADMIN_API = `${adminIP}/adminapi-v3.0.0`;
-const sessionStorageEncKey = '<>';
+const sessionStorageEncKey = '';
 // With API MAN Configuration
 // const COMMON_API_OPEN = `http://${IP}:8080/apiman-gateway/IEMR/Common/open/`;
 // const COMMON_API = `http://${IP}:8080/apiman-gateway/IEMR/Common/open/`;
