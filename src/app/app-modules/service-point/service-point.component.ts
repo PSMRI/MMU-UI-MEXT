@@ -244,7 +244,7 @@ export class ServicePointComponent implements OnInit, DoCheck {
         (servicePoint: any) => {
           return servicePoint.servicePointName
             .toLowerCase()
-            .startsWith(searchTerm?.toLowerCase());
+            .startsWith(searchTerm.toLowerCase());
         }
       );
     } else {

@@ -41,23 +41,23 @@ const adminIP = 'https://amritwprdev.piramalswasthya.org/';
 const FHIRIP = 'https://amritwprdev.piramalswasthya.org';
 const sessionStorageEncKey = '';
 
-const ADMIN_API = `${adminIP}/adminapi-v3.0.0/`;
+const ADMIN_API = `${adminIP}/adminapi-v1.0/`;
 // With API MAN Configuration
 // const COMMON_API_OPEN = `http://${IP}:8080/apiman-gateway/IEMR/Common/open/`;
 // const COMMON_API = `http://${IP}:8080/apiman-gateway/IEMR/Common/open/`;
 // const MMU_API = `http://${IP}:8080/apiman-gateway/IEMR/MMU/1.0/`;
 
 // Without API MAN Configuration
-const COMMON_API_OPEN = `${commonIP}commonapi-v3.0.0/`;
-const COMMON_API = `${commonIP}commonapi-v3.0.0/`;
-const MMU_API = `${mmuIP}mmuapi-v3.0.0/`;
-const TM_API = `${tmIP}tmapi-v3.0.0/`;
-const COMMON_API_OPEN_SYNC = `${SERVER_IP}commonapi-v3.0.0/`;
-const SCHEDULER_API = `${schedulerIP}schedulerapi-v3.0.0/`;
-const FHIR_API = `${FHIRIP}/fhirapi-v1.2/`;
-const IDENTITY_API = `${identityIP}/identity-0.0.1/`;
+const COMMON_API_OPEN = `${commonIP}commonapi-v1.0/`;
+const COMMON_API = `${commonIP}commonapi-v1.0/`;
+const MMU_API = `${mmuIP}mmuapi-v1.0/`;
+const TM_API = `${tmIP}tmapi-v1.0/`;
+const COMMON_API_OPEN_SYNC = `${SERVER_IP}commonapi-v1.0/`;
+const SCHEDULER_API = `${schedulerIP}schedulerapi-v1.0/`;
+const FHIR_API = `${FHIRIP}/fhirapi-v1.0/`;
+const IDENTITY_API = `${identityIP}identity-0.0.1/`;
 
-const mmuUICasesheet = `${mmuUI_IP}mmuui-v3.0.0`;
+const mmuUICasesheet = `${mmuUI_IP}mmuui-v1.0`;
 const IOT_API = 'http://localhost:8085/ezdx-hub-connect-srv';
 
 export const environment = {
@@ -405,7 +405,7 @@ export const environment = {
   startRBSurl: '/api/v1/wbpoct_tests/blood_glucose',
 
   // Check availability of benIDs
-  getBenIDs: `${identityIP}identity-0.0.1/id/checkAvailablBenIDLocalServer`,
+  getBenIDs: `${IDENTITY_API}id/checkAvailablBenIDLocalServer`,
   generateBenID: `${MMU_API}dataSyncActivity/callCentralAPIToGenerateBenIDAndimportToLocal`,
 
   // Inventory Data Sync Download
@@ -476,4 +476,16 @@ export const environment = {
   familySearchUrl: `${IDENTITY_API}family/searchFamily`,
   createFamilyUrl: `${IDENTITY_API}family/createFamily`,
   getFamilyMemberUrl: `${IDENTITY_API}family/getFamilyDetails`,
+
+  /* ABDM Mapped Facility */
+  getAbdmMappedFacility: `${COMMON_API}facility/getWorklocationMappedAbdmFacility/`,
+  saveAbdmFacilityIdForVisit: `${FHIR_API}facility/saveAbdmFacilityId`,
+
+  /* Abha V3 APIs */
+  requestOtpForAbhaEnroll: `${FHIR_API}abhaCreation/requestOtpForAbhaEnrollment`,
+  abhaEnrollmentByAadhaar: `${FHIR_API}abhaCreation/abhaEnrollmentByAadhaar`,
+  verifyMobileForAbhaAuth: `${FHIR_API}abhaCreation/verifyAuthByMobile`,
+  requestOtpForLogin: `${FHIR_API}abhaLogin/abhaLoginRequestOtp`,
+  verifyOtpForLogin: `${FHIR_API}abhaLogin/verifyAbhaLogin`,
+  printPngCard: `${FHIR_API}abhaCreation/printAbhaCard`,
 };

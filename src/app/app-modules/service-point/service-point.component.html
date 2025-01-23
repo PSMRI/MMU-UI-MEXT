@@ -64,7 +64,7 @@
                   (ngModelChange)="getDemographics()"
                   (keyup)="
                     filterServicePointVan(
-                      servicePointForm.controls.servicePointName
+                      servicePointForm.controls.servicePointName.value
                     )
                   " />
                 <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
