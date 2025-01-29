@@ -70,11 +70,11 @@ export const environment = {
   haemoglobinTest: `Haemoglobin Test`,
   parentAPI: `${MMU_API}`,
 
-  INVENTORY_URL: `${inventoryUI_IP}inventory-wasa/#/redirin?`,
+  INVENTORY_URL: `${inventoryUI_IP}inventory/#/redirin?`,
   fallbackUrl: `/pharmacist/redirfallback`,
   redirInUrl: `/pharmacist/redirin`,
 
-  TELEMEDICINE_URL: `${schedulerUI_IP}scheduler-wasa/#/?`,
+  TELEMEDICINE_URL: `${schedulerUI_IP}scheduler/#/?`,
   fallbackMMUUrl: `/logout-tm`,
   redirInMMUUrl: `/common/tcspecialist-worklist`,
   licenseURL: `${COMMON_API}license.html`,

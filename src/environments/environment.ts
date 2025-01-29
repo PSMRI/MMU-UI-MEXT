@@ -82,13 +82,12 @@ export const environment = {
   parentAPI: `${MMU_API}`,
   abhaExtension: `@abdm`,
 
-  INVENTORY_URL:
-    'https://amritwprdev.piramalswasthya.org/inventory-wasa/#/redirin?',
+  INVENTORY_URL: 'https://amritwprdev.piramalswasthya.org/inventory/#/redirin?',
   fallbackUrl: `/pharmacist/redirfallback`,
   redirInUrl: `/pharmacist/redirin`,
 
   // TELEMEDICINE_URL: 'http://localhost:4300/#/?',
-  TELEMEDICINE_URL: `${SCHEDULER_API}scheduler-wasa/#/?`,
+  TELEMEDICINE_URL: `${SCHEDULER_API}scheduler/#/?`,
 
   fallbackMMUUrl: `/logout-tm`,
   redirInMMUUrl: `/common/tcspecialist-worklist`,
