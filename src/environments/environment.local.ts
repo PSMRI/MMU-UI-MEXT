@@ -45,7 +45,7 @@ const FHIRIP = 'http://localhost';
 // const MMU_API = `http://${IP}:8080/apiman-gateway/IEMR/MMU/1.0/`;
 
 // Without API MAN Configuration
-const ADMIN_API = `${adminIP}:8082`;
+const ADMIN_API = `${adminIP}:8082/`;
 const COMMON_API_OPEN = `${commonIP}:8083/`;
 const COMMON_API = `${commonIP}:8083/`;
 const MMU_API = `${mmuIP}:8087/`;
@@ -423,7 +423,7 @@ export const environment = {
   downloadSignUrl: `${COMMON_API}signature1/`,
 
   //calibration integration
-  getCalibrationStrips: `${ADMIN_API}/fetchCalibrationStrips`,
+  getCalibrationStrips: `${ADMIN_API}fetchCalibrationStrips`,
 
   getLanguageList: `${COMMON_API}beneficiary/getLanguageList`,
 
