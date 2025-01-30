@@ -59,8 +59,8 @@ const mmuUICasesheet = `${mmuUI_IP}:4202`;
 const IOT_API = 'http://localhost:8080/ezdx-hub-connect-srv';
 
 export const environment = {
-  production: true,
-  isMMUOfflineSync: false,
+  production: false,
+  isMMUOfflineSync: true,
 
   app: `MMU`,
   RBSTest: `RBS Test`,
