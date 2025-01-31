@@ -57,10 +57,12 @@ const IDENTITY_API = `${identityIP}:8094/`;
 
 const mmuUICasesheet = `${mmuUI_IP}:4202`;
 const IOT_API = 'http://localhost:8080/ezdx-hub-connect-srv';
+const sessionStorageEncKey = '';
 
 export const environment = {
   production: false,
   isMMUOfflineSync: true,
+  encKey: sessionStorageEncKey,
 
   app: `MMU`,
   RBSTest: `RBS Test`,
